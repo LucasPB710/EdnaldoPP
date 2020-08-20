@@ -7,7 +7,7 @@
 
 std::vector<std::string> ops{"=","+","-","*","/"};
 
-std::vector<std::string> edWords{"BirinaOCocoEhSeco","ValeTudo","ValeNada","Coco","Ed:"};
+std::vector<std::string> edWords{"BirinaOCocoEhSeco","ValeTudo","ValeNada","Melancia","Ed:"};
                                  //IF                THEN      ENDIF      INT
 
 

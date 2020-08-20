@@ -8,7 +8,7 @@ Funcs fun;
 
 int IdFunc(std::vector<std::string> pals, int pal){
 //  std::cout<<"Girafa\n";
-  if(pals[pal] == "Coco"){
+  if(pals[pal] == "Melancia"){
  //   std::cout<<"Girafa2\n";
    if(1==1){
     fun.intN_set(pals[pal+1]);
