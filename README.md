@@ -47,9 +47,9 @@ Crie um novo arquivo no Repl.it ou qualquer canto, pode ter qualquer extensão o
 
 Ate agora no edlang a gente so tem 2 coisas
 
--Melancia -> int
+- Melancia -> int
 
--Ed: -> print
+- Ed: -> print
 
 Funcionam da seguinte maneira
 
