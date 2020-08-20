@@ -53,7 +53,7 @@ Ate agora no edlang a gente so tem essas coisas:
 
 - Lenha -> string
 
--ValeNada e ValeTudo -> Delimitadores
+- ValeNada e ValeTudo -> Delimitadores
 
 Funcionam da seguinte maneira
 
