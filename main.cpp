@@ -7,8 +7,8 @@
 
 std::vector<std::string> ops{"=","+","-","*","/"};
 
-std::vector<std::string> edWords{"BirinaOCocoEhSeco","ValeTudo","ValeNada","Melancia","Ed:"};
-                                 //IF                THEN      ENDIF      INT
+std::vector<std::string> edWords{"BirinaOCocoEhSeco","ValeTudo","ValeNada","Melancia","Ed:","Lenha","ValeNada","ValeTudo"};
+                                 //IF                THEN      ENDIF      INT        print   STRING  (           )
 
 
 int main(){

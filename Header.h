@@ -14,6 +14,8 @@ class Funcs{
     //gets
     std::vector<int> intV_get();
     std::vector<std::string> intN_get();
+    std::vector<std::string> strV_get();
+    std::vector<std::string> strN_get();
     int intS_get();
 
 
@@ -21,11 +23,15 @@ class Funcs{
     void intV_set(int inp);
     void intN_set(std::string inp);
     void intS_set(int inp);
+    void strN_set(std::string inp);
+    void strV_set(std::string inp);
 
 
 
   private:
     std::vector<int> intVars;
     std::vector<std::string> intNames;
+    std::vector<std::string> strNames;
+    std::vector<std::string> strVars;
     int intSize;
 };

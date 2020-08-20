@@ -3,3 +3,5 @@ compila:
 
 run:
 	./EdLangInterpreter.o 
+clean:
+	rm EdLangInterpreter.o
