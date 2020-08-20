@@ -58,41 +58,43 @@ Ate agora no edlang a gente so tem essas coisas:
 Funcionam da seguinte maneira
 
 
-- Melancia <nome_da_int> <valor_da_int> 
++ ``` Melancia <nome_da_int> <valor_da_int> ```
 
-  (exemplo: Melancia Idade 56)
+  - (exemplo: Melancia Idade 56)
   
   
 
-- Ed: <nome_da_int> ou <nome_da_string>
++ ``` Ed: <nome_da_int> ou <nome_da_string> ```
 
-  (exemplo: Ed: Idade)
+- (exemplo: Ed: Idade)
 
 OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer variavel)
 
 
 
 
-- Lenha <nome_da_string> ValeNada <valor_da_string> ValeTudo
 
-  (exemplo: Lenha MeuNome ValeNada Parede em construção ValeTudo)
++ Lenha <nome_da_string> ValeNada <valor_da_string> ValeTudo
+
+  - (exemplo: Lenha MeuNome ValeNada Parede em construção ValeTudo)
   
-OBS: entre ValeNada e ValeTudo, pode ter espaços
+  - OBS: entre ValeNada e ValeTudo, pode ter espaços
 
 
 
-- ValeNada e ValeTudo
++ ValeNada e ValeTudo
 
-  sao delimitadores (nao sei se esse é o nome certo), ou seja, nao sao algo espécifico, pode ser usados como " "ou ( ) ou { } ou ' ', por ai vai, sendo o caractere da esquerda o ValeNada e o da direita o ValeTudo (nao, isso nao foi baseado em politica). qual dessas coisas eles vao representar pode variar muito em relação ao que voce usa, entao nao ache que seriam correspondentes a apenas () ou " ", eles terão usos diferentes no futuro.
+  - sao delimitadores (nao sei se esse é o nome certo), ou seja, nao sao algo espécifico, pode ser usados como " "ou ( ) ou { } ou ' ', por ai vai, sendo o caractere da esquerda o ValeNada e o da direita o ValeTudo (nao, isso nao foi baseado em politica). qual dessas coisas eles vao representar pode variar muito em relação ao que voce usa, entao nao ache que seriam correspondentes a apenas () ou " ", eles terão usos diferentes no futuro.
   
 # O FAMOSO HELLO WORLD
 
 Hello world em EdLang seria:
 
+```
 Lenha My_string ValeNada HELLO EDNALDO PEREIRA ValeTudo
 
 Ed: My_string
-
+```
   
 
 
