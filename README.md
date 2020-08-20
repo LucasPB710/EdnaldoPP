@@ -24,9 +24,9 @@ int idade = 39; std::cout<<idade<<std::endl;
 
  int idade = 39; std::cout<<idade<<std::endl; 
 
-# COMO USAR NO REPL.IT
+# COMO USAR NO REPL.IT [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/Simples-terminal)](https://repl.it/github/LucasPB710/Simples-terminal)
 
-No repl.it NAO clicke em run
+Voce pode clicar em run, se quiser, ou fazer o que esta abaixo
 
 va no terminal (coiso que geralmente fica no lado direito e tem um fundo preto) e escreva os seguintes comandos:
 
