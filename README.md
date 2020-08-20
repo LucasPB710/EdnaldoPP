@@ -1,4 +1,4 @@
- [Run on Repl.it](https://repl.it/github/LucasPB710/EdLang)
+ [Run on Repl.it](https://repl.it/@LucasPB710/EdLang)
  # SOBRE
 
 if you are a gringo, you will not understand nada sobre esse coiso, va embora
@@ -25,7 +25,7 @@ int idade = 39; std::cout<<idade<<std::endl;
 
  int idade = 39; std::cout<<idade<<std::endl; 
 
-# COMO USAR NO REPL.IT  [Run on Repl.it](https://repl.it/github/LucasPB710/EdLang)
+# COMO USAR NO REPL.IT  [Run on Repl.it](https://repl.it/@LucasPB710/EdLang)
 
 (clicke nesse "run on repl.it")
 
