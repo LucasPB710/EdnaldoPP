@@ -1,4 +1,5 @@
-# SOBRE
+ [Run on Repl.it](https://repl.it/@LucasPB710/EdLang)
+ # SOBRE
 
 if you are a gringo, you will not understand nada sobre esse coiso, va embora
 
@@ -24,9 +25,11 @@ int idade = 39; std::cout<<idade<<std::endl;
 
  int idade = 39; std::cout<<idade<<std::endl; 
 
-# COMO USAR NO REPL.IT
+# COMO USAR NO REPL.IT  [Run on Repl.it](https://repl.it/@LucasPB710/EdLang)
 
-No repl.it NAO clicke em run
+(clicke nesse "run on repl.it")
+
+Voce pode clicar em run, se quiser, ou fazer o que esta abaixo
 
 va no terminal (coiso que geralmente fica no lado direito e tem um fundo preto) e escreva os seguintes comandos:
 
