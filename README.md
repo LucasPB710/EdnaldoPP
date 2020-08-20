@@ -1,3 +1,4 @@
+[![Run on Repl.it](https://repl.it/badge/github/LucasPB710/Simples-terminal)](https://repl.it/github/LucasPB710/Simples-terminal)
 # SOBRE
 
 if you are a gringo, you will not understand nada sobre esse coiso, va embora
