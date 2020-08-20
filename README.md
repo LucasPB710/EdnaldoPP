@@ -23,7 +23,6 @@ esse exemplo cria uma INT chamada IDADE que possui valor 39, depos ele coloca na
 int idade = 39; std::cout<<idade<<std::endl;
 ```
 
- int idade = 39; std::cout<<idade<<std::endl; 
 
 # COMO USAR NO REPL.IT  [Run on Repl.it](https://repl.it/@LucasPB710/EdLang)
 
@@ -39,6 +38,8 @@ va no terminal (coiso que geralmente fica no lado direito e tem um fundo preto) 
 Aqui vai pedir para voce colocar o nome do arquivo, entao caso voce nao tenha criado o arquivo, pode descer um pouco para ver como criar
 
 Caso voce ja tenha criado, basta colocar o nome dele, se estiver tudo certo, ele vai rodar, caso tenha algo errado, a mensagem de erro vai ser uma bosta pq eu ainda nao corrigi isso :)
+
+Voce pode usar o test.edl para ver o que as coisas fazem (vai mudar com o tempo, conforme a lingua for mudando)
 
 # COMO CRIAR UM ARQUIVO EM EDLANG
 
