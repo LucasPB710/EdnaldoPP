@@ -1,4 +1,5 @@
 [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
+
 # SOBRE
 
 if you are a gringo, you will not understand nada sobre esse coiso, va embora
@@ -22,7 +23,6 @@ esse exemplo cria uma INT chamada IDADE que possui valor 39, depos ele coloca na
 ```cpp
 int idade = 39; std::cout<<idade<<std::endl;
 ```
-
 
 # COMO USAR NO REPL.IT  [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
 
@@ -57,35 +57,26 @@ Ate agora no edlang a gente so tem essas coisas:
 
 Funcionam da seguinte maneira
 
-
 + ``` Melancia <nome_da_int> <valor_da_int> ```
-
+  
   - (exemplo: Melancia Idade 56)
-  
-  
 
 + ``` Ed: <nome_da_int> ou <nome_da_string> ```
-
-- (exemplo: Ed: Idade)
+  
+  - (exemplo: Ed: Idade)
 
 OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer variavel)
 
-
-
-
-
 + Lenha <nome_da_string> ValeNada <valor_da_string> ValeTudo
-
+  
   - (exemplo: Lenha MeuNome ValeNada Parede em construção ValeTudo)
   
-  - OBS: entre ValeNada e ValeTudo, pode ter espaços
-
-
+  - BS: entre ValeNada e ValeTudo, pode ter espaços, tendo em vista que uma string pode ter varias palavras
 
 + ValeNada e ValeTudo
-
-  - sao delimitadores (nao sei se esse é o nome certo), ou seja, nao sao algo espécifico, pode ser usados como " "ou ( ) ou { } ou ' ', por ai vai, sendo o caractere da esquerda o ValeNada e o da direita o ValeTudo (nao, isso nao foi baseado em politica). qual dessas coisas eles vao representar pode variar muito em relação ao que voce usa, entao nao ache que seriam correspondentes a apenas () ou " ", eles terão usos diferentes no futuro.
   
+  - sao delimitadores (nao sei se esse é o nome certo), ou seja, nao sao algo espécifico, pode ser usados como " "ou ( ) ou { } ou ' ', por ai vai, sendo o caractere da esquerda o ValeNada e o da direita o ValeTudo (nao, isso nao foi baseado em politica). qual dessas coisas eles vao representar pode variar muito em relação ao que voce usa, entao nao ache que seriam correspondentes a apenas () ou " ", eles terão usos diferentes no futuro.
+
 # O FAMOSO HELLO WORLD
 
 Hello world em EdLang seria:
@@ -95,6 +86,17 @@ Lenha My_string ValeNada HELLO EDNALDO PEREIRA ValeTudo
 
 Ed: My_string
 ```
-  
 
+# COISAS QUE SERÃO ADICIONADAS:
 
+(Organizadas por prioridade)
+
+- [ ] Matematica (+,-,*,/)
+
+- [ ] IF (estruturado em if then endif / else then endelse)
+
+- [ ] ELSE
+
+- [ ] WHILE
+
+- [ ] FOR
