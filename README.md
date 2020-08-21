@@ -97,7 +97,7 @@ Ed: My_string
 
 (Organizadas por prioridade)
 
-- [ ] Matematica (+,-,*,/)
+- [X] Matematica (+,-,*,/)
 
 - [ ] IF (estruturado em if then endif / else then endelse)
 
