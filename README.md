@@ -69,7 +69,7 @@ Funcionam da seguinte maneira
 
 OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer variavel)
 
-+ Lenha <nome_da_string> ValeNada <valor_da_string> ValeTudo
++ ``` Lenha <nome_da_string> ValeNada <valor_da_string> ValeTudo ```
   
   - (exemplo: Lenha MeuNome ValeNada Parede em construção ValeTudo)
   
@@ -79,9 +79,11 @@ OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer var
   
   - sao delimitadores (nao sei se esse é o nome certo), ou seja, nao sao algo espécifico, pode ser usados como " "ou ( ) ou { } ou ' ', por ai vai, sendo o caractere da esquerda o ValeNada e o da direita o ValeTudo (nao, isso nao foi baseado em politica). qual dessas coisas eles vao representar pode variar muito em relação ao que voce usa, entao nao ache que seriam correspondentes a apenas () ou " ", eles terão usos diferentes no futuro.
   
-+ Chico(operação) <valor1> <valor2> <int_que_vai_guardar_o_resultado>
++ ``` Chico(operação) <valor1> <valor2> <int_que_vai_guardar_o_resultado> ```
   
   - (exemplo: Chico* 42 73 NumerosBunitos)
+  
+  - salva o resultado da multipicação de 42 e 73 na int chamada NumerosBunitos
 
 # O FAMOSO HELLO WORLD
 
