@@ -85,6 +85,145 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   }
 
+  else if(pals[pal] == "Chico+"){
+    int p1,p2;
+    bool achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+1] == fun.intN_get()[i]){
+        p1 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p1 = stoi(pals[pal+1]);
+
+    achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+2] == fun.intN_get()[i]){
+        p2 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p2 = stoi(pals[pal+2]);
+
+    fun.intN_set(pals[pal+3]);
+    fun.intV_set(p1+p2);
+    
+    return 3;
+  }
+
+  //SUB
+  else if(pals[pal] == "Chico-"){
+    int p1,p2;
+    bool achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+1] == fun.intN_get()[i]){
+        p1 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p1 = stoi(pals[pal+1]);
+
+    achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+2] == fun.intN_get()[i]){
+        p2 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p2 = stoi(pals[pal+2]);
+
+    fun.intN_set(pals[pal+3]);
+    fun.intV_set(p1-p2);
+    
+    return 3;
+  }
+
+  //MULT
+  else if(pals[pal] == "Chico*"){
+    int p1,p2;
+    bool achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+1] == fun.intN_get()[i]){
+        p1 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p1 = stoi(pals[pal+1]);
+
+    achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+2] == fun.intN_get()[i]){
+        p2 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p2 = stoi(pals[pal+2]);
+
+    fun.intN_set(pals[pal+3]);
+    fun.intV_set(p1*p2);
+    
+    return 3;
+  }
+
+  //DIV
+  else if(pals[pal] == "Chico/"){
+    int p1,p2;
+    bool achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+1] == fun.intN_get()[i]){
+        p1 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p1 = stoi(pals[pal+1]);
+
+    achado = false;
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if (pals[pal+2] == fun.intN_get()[i]){
+        p2 = fun.intV_get()[i];
+        i = fun.intN_get().size();
+        achado = true;
+      }
+    }
+
+    if(!achado)
+      p2 = stoi(pals[pal+2]);
+
+    fun.intN_set(pals[pal+3]);
+    fun.intV_set(p1/p2);
+    
+    return 3;
+  }
+
   return 0 ;
 }
 
