@@ -20,7 +20,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     fun.intN_set(pals[pal+1]);
 
     if(d == pals[pal+2].size())
-      fun.intV_set(stoi(pals[pal+2]));
+      fun.intV_set(stof(pals[pal+2]));
     else
       std::cout<<"Valor da string nao é numerico\nPalavra: "<<pals[pal+2]<<"\n";
    return 2;
@@ -86,7 +86,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
   }
 
   else if(pals[pal] == "Chico+"){
-    int p1,p2;
+    float p1,p2;
     bool achado = false;
 
     for(int i = 0; i<fun.intN_get().size(); i++){
@@ -98,7 +98,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p1 = stoi(pals[pal+1]);
+      p1 = stof(pals[pal+1]);
 
     achado = false;
 
@@ -111,7 +111,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p2 = stoi(pals[pal+2]);
+      p2 = stof(pals[pal+2]);
 
     fun.intN_set(pals[pal+3]);
     fun.intV_set(p1+p2);
@@ -121,7 +121,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   //SUB
   else if(pals[pal] == "Chico-"){
-    int p1,p2;
+    float p1,p2;
     bool achado = false;
 
     for(int i = 0; i<fun.intN_get().size(); i++){
@@ -133,7 +133,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p1 = stoi(pals[pal+1]);
+      p1 = stof(pals[pal+1]);
 
     achado = false;
 
@@ -146,7 +146,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p2 = stoi(pals[pal+2]);
+      p2 = stof(pals[pal+2]);
 
     fun.intN_set(pals[pal+3]);
     fun.intV_set(p1-p2);
@@ -156,7 +156,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   //MULT
   else if(pals[pal] == "Chico*"){
-    int p1,p2;
+    float p1,p2;
     bool achado = false;
 
     for(int i = 0; i<fun.intN_get().size(); i++){
@@ -168,7 +168,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p1 = stoi(pals[pal+1]);
+      p1 = stof(pals[pal+1]);
 
     achado = false;
 
@@ -181,7 +181,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p2 = stoi(pals[pal+2]);
+      p2 = stof(pals[pal+2]);
 
     fun.intN_set(pals[pal+3]);
     fun.intV_set(p1*p2);
@@ -191,7 +191,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   //DIV
   else if(pals[pal] == "Chico/"){
-    int p1,p2;
+    float p1,p2;
     bool achado = false;
 
     for(int i = 0; i<fun.intN_get().size(); i++){
@@ -203,7 +203,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p1 = stoi(pals[pal+1]);
+      p1 = stof(pals[pal+1]);
 
     achado = false;
 
@@ -216,7 +216,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     }
 
     if(!achado)
-      p2 = stoi(pals[pal+2]);
+      p2 = stof(pals[pal+2]);
 
     fun.intN_set(pals[pal+3]);
     fun.intV_set(p1/p2);
@@ -231,11 +231,11 @@ int IdFunc(std::vector<std::string> pals, int pal){
  //Gets e Sets//
 ///////////////
 
-std::vector<int> Funcs::intV_get(){
+std::vector<float> Funcs::intV_get(){
   return intVars;
 }
 
-void Funcs::intV_set(int inp){
+void Funcs::intV_set(float inp){
  intVars.push_back(inp); 
 }
 
@@ -251,7 +251,7 @@ int Funcs::intS_get(){
   return intSize;
 }
 
-void Funcs::intS_set(int inp){
+void Funcs::intS_set(float inp){
   intSize = inp;
 
 }
@@ -270,3 +270,4 @@ void Funcs::strV_set(std::string inp){
 
 void Funcs::print(std::string inp){ std::cout<<inp<<std::endl; }
 void Funcs::print(int inp){std::cout<<inp<<std::endl;}
+void Funcs::print(float inp){std::cout<<inp<<std::endl;}

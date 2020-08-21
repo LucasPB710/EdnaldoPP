@@ -10,9 +10,10 @@ class Funcs{
     //
     void print(std::string inp);
     void print(int inp);
+    void print(float inp);
 
     //gets
-    std::vector<int> intV_get();
+    std::vector<float> intV_get();
     std::vector<std::string> intN_get();
     std::vector<std::string> strV_get();
     std::vector<std::string> strN_get();
@@ -20,16 +21,16 @@ class Funcs{
 
 
     //sets
-    void intV_set(int inp);
+    void intV_set(float inp);
     void intN_set(std::string inp);
-    void intS_set(int inp);
+    void intS_set(float inp);
     void strN_set(std::string inp);
     void strV_set(std::string inp);
 
 
 
   private:
-    std::vector<int> intVars;
+    std::vector<float> intVars;
     std::vector<std::string> intNames;
     std::vector<std::string> strNames;
     std::vector<std::string> strVars;
