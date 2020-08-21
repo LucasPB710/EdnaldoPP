@@ -1,5 +1,12 @@
 [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
 
+# Lista com os comandos da edlang:
+
+(voce nao precisa ficar indo ao final desse arquivo, la tem exemplos melhores
+
+[comandos](Comandos.md)
+
+
 # SOBRE
 
 if you are a gringo, you will not understand nada sobre esse coiso, va embora
