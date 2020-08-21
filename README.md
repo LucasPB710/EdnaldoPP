@@ -55,6 +55,8 @@ Ate agora no edlang a gente so tem essas coisas:
 
 - ValeNada e ValeTudo -> Delimitadores
 
+- Chico+, Chico-, Chico*, Chico/
+
 Funcionam da seguinte maneira
 
 + ``` Melancia <nome_da_int> <valor_da_int> ```
@@ -71,11 +73,15 @@ OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer var
   
   - (exemplo: Lenha MeuNome ValeNada Parede em construção ValeTudo)
   
-  - BS: entre ValeNada e ValeTudo, pode ter espaços, tendo em vista que uma string pode ter varias palavras
+  - OBS: entre ValeNada e ValeTudo, pode ter espaços, tendo em vista que uma string pode ter varias palavras
 
 + ValeNada e ValeTudo
   
   - sao delimitadores (nao sei se esse é o nome certo), ou seja, nao sao algo espécifico, pode ser usados como " "ou ( ) ou { } ou ' ', por ai vai, sendo o caractere da esquerda o ValeNada e o da direita o ValeTudo (nao, isso nao foi baseado em politica). qual dessas coisas eles vao representar pode variar muito em relação ao que voce usa, entao nao ache que seriam correspondentes a apenas () ou " ", eles terão usos diferentes no futuro.
+  
++ Chico(operação) <valor1> <valor2> <int_que_vai_guardar_o_resultado>
+  
+  - (exemplo: Chico* 42 73 NumerosBunitos)
 
 # O FAMOSO HELLO WORLD
 
