@@ -2,7 +2,7 @@
 
 # Lista com os comandos da edlang:
 
-(voce nao precisa ficar indo ao final desse arquivo, la tem exemplos melhores
+(voce nao precisa ficar indo ao final do readme, no arquivo abaixo tem exemplos melhores")
 
 [comandos](Comandos.md)
 
