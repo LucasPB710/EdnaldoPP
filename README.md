@@ -12,7 +12,7 @@
 + 1.0 SOBRE
   - 1.1 Sobre o edlang
 + 2.0 COMO USAR NO REPLIT
-  -2.1 Usando shell no replit
+  - 2.1 Usando shell no replit
 + 3.0 COMO CRIAR UM ARQUIVO EM EDLANG
 + 4.0 HELLO WORLD
 + 5.0 IDEIAS QUE SERÃO ADICIONADAS E NOTAS SOBRE O QUE FOI ADICIONADO
