@@ -13,7 +13,7 @@ obs: op = alguma dessas operações: +, -, *, /
 | NOME           | RECEBE                 | EQUIVALE A   |
 |:--------------:| ---------------------- |:------------:|
 | Melancia       | Float                  | Int          |
-| Ed:            | Int ou String          | Print        |
+| Ed:            | Float ou String        | Print        |
 | Lenha          | String                 | String       |
 | Vale Nada/Tudo |                        | Delimitador  |
 | Chico(op)      | Duas Ints ou floats    | +, -, * ou / |
