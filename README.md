@@ -58,10 +58,11 @@ Caso voce ja tenha criado, basta colocar o nome dele, se estiver tudo certo, ele
 
 Voce pode usar o test.edl para ver o que as coisas fazem (vai mudar com o tempo, conforme a lingua for mudando)
 
-## Usando shell no repl.it
+## 2.1 Usando shell no repl.it
 
 pra usar shell é bem simples, no lugar de clicar em run, no terminal do repl.it voce escreve os seguintes comandos:
-```make shell [ENTER]
+```
+   make shell [ENTER]
    make compila [ENTER] 
    ```
    
