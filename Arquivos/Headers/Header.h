@@ -22,10 +22,12 @@ class Funcs{
 
     //sets
     void intV_set(float inp);
+    void intV_change(float inp, int pos);
     void intN_set(std::string inp);
     void intS_set(float inp);
     void strN_set(std::string inp);
     void strV_set(std::string inp);
+    void strV_change(std::string inp, int pos);
 
 
 

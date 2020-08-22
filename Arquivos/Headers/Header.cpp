@@ -8,6 +8,9 @@ Funcs fun;
 
 int IdFunc(std::vector<std::string> pals, int pal){
 
+  bool intJaExiste = false;
+  int posInt;
+
   if(pals[pal] == "Melancia"){
     //verifica se todos caracteres sao inteiros
     int d = 0;
@@ -15,15 +18,32 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
       if(isdigit(pals[pal+2][i]))
         d++;
-      
+      else if(pals[pal+2][i] == '.')
+        d++;
     }
-    fun.intN_set(pals[pal+1]);
 
-    if(d == pals[pal+2].size())
-      fun.intV_set(stof(pals[pal+2]));
-    else
-      std::cout<<"Valor da string nao é numerico\nPalavra: "<<pals[pal+2]<<"\n";
-   return 2;
+    for(int i = 0; i<fun.intN_get().size(); i ++){
+      if (pals[pal+1] == fun.intN_get()[i]){
+        posInt = i;
+        intJaExiste = true;
+      }
+    }
+
+    
+    if (intJaExiste){
+      fun.intN_set(pals[pal+1]);
+      fun.intV_change(stof(pals[pal+2]),posInt);
+      return 2;
+    }
+    else{
+      if(d == pals[pal+2].size()){
+        fun.intV_set(stof(pals[pal+2]));
+        fun.intN_set(pals[pal+1]);
+      }
+      else
+        std::cout<<"Valor da string nao é numerico\nPalavra: "<<pals[pal+2]<<"\n";
+     return 2;
+    }
    
   }
 
@@ -54,7 +74,8 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   else if(pals[pal] == "Lenha"){
 
-    int pValeTudo = 0, i = 0;
+    int pValeTudo = 0, i = 0, posStr;
+    bool strJaExiste = false;
     
     while(pValeTudo == 0 ){
       if(pals[pal+i] == "ValeTudo")
@@ -66,7 +87,14 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
     if (pals[pal+2] == "ValeNada" && pValeTudo >0){
 
-      fun.strN_set(pals[pal+1]);
+      for(int i = 0;i<fun.strN_get().size(); i++){
+        if(pals[pal+1] == fun.strN_get()[i]){
+          strJaExiste = true;
+          posStr = i;
+        }
+
+      }
+
       //fun.strV_set(pals[pal+3]);
       std::string Inp;
 
@@ -75,7 +103,14 @@ int IdFunc(std::vector<std::string> pals, int pal){
         Inp.append(" ");
       }
       
-      fun.strV_set(Inp);
+      if(strJaExiste){
+        fun.strV_change(Inp, posStr);
+      }
+
+      else{
+        fun.strV_set(Inp);
+        fun.strN_set(pals[pal+1]);
+      }
       return pValeTudo;
 
     }
@@ -239,6 +274,10 @@ void Funcs::intV_set(float inp){
  intVars.push_back(inp); 
 }
 
+void Funcs::intV_change(float inp, int pos){
+ intVars[pos] = inp; 
+}
+
 std::vector<std::string> Funcs::intN_get(){
   return intNames;
 }
@@ -266,6 +305,11 @@ void Funcs::strN_set(std::string inp){
 void Funcs::strV_set(std::string inp){
   strVars.push_back(inp);
 }
+
+void Funcs::strV_change(std::string inp, int pos){
+  strVars[pos] = inp;
+}
+
 
 
 void Funcs::print(std::string inp){ std::cout<<inp<<std::endl; }

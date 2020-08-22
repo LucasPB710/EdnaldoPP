@@ -1,5 +1,5 @@
 compila:
-	g++ Header.cpp main.cpp -o EdLangInterpreter.o
+	g++ Arquivos/Headers/Header.cpp Arquivos/main.cpp -o EdLangInterpreter.o
 
 run:
 	./EdLangInterpreter.o 
@@ -7,4 +7,4 @@ clean:
 	rm EdLangInterpreter.o
 
 shell:
-	g++ Header.cpp shell.cpp -o EdLangInterpreter.o
+	g++ Arquivos/Headers/Header.cpp Arquivos/shell.cpp -o EdLangInterpreter.o
