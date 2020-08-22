@@ -6,14 +6,21 @@
 
 [comandos](Comandos.md)
 
+# Sumario:
++ 1.0 SOBRE
+  - 1.1 Sobre o edlang
++ 2.0 COMO USAR NO REPLIT
++ 3.0 COMO CRIAR UM ARQUIVO EM EDLANG
++ 4.0 HELLO WORLD
++ 5.0 IDEIAS QUE SERÃO ADICIONADAS E NOTAS SOBRE O QUE FOI ADICIONADO
 
-# SOBRE
+# 1.0 SOBRE
 
 if you are a gringo, you will not understand nada sobre esse coiso, va embora
 
 Edlang é um projeto que passa um arquivo (.edl, mas pode ser qualquer extensao) em um codigo escrito em c++ que realiza alguns comandos de acordo com o que tem no arquivo
 
-## sobre o edlang
+## 1.1 Sobre o edlang
 
 É uma linguagem que lê palavra por palavra, entao tu pode fazer um codigo em uma linha
 
@@ -31,7 +38,7 @@ esse exemplo cria uma INT chamada IDADE que possui valor 39, depos ele coloca na
 int idade = 39; std::cout<<idade<<std::endl;
 ```
 
-# COMO USAR NO REPL.IT  [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
+# 2.0 COMO USAR NO REPL.IT  [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
 
 (clicke nesse "run on repl.it")
 
@@ -48,7 +55,7 @@ Caso voce ja tenha criado, basta colocar o nome dele, se estiver tudo certo, ele
 
 Voce pode usar o test.edl para ver o que as coisas fazem (vai mudar com o tempo, conforme a lingua for mudando)
 
-# COMO CRIAR UM ARQUIVO EM EDLANG
+# 3.0 COMO CRIAR UM ARQUIVO EM EDLANG
 
 Crie um novo arquivo no Repl.it ou qualquer canto, pode ter qualquer extensão ou nenhuma (Ex.: arquivo, arquivo.txt, arquivo.edl...)
 
@@ -92,7 +99,7 @@ OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer var
   
   - salva o resultado da multipicação de 42 e 73 na int chamada NumerosBunitos
 
-# O FAMOSO HELLO WORLD
+# 4.0 O FAMOSO HELLO WORLD
 
 Hello world em EdLang seria:
 
@@ -102,7 +109,7 @@ Lenha My_string ValeNada HELLO EDNALDO PEREIRA ValeTudo
 Ed: My_string
 ```
 
-# COISAS QUE SERÃO ADICIONADAS:
+# 5.0 COISAS QUE SERÃO ADICIONADAS:
 
 (Organizadas por prioridade)
 
