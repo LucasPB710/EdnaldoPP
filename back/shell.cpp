@@ -1,5 +1,4 @@
 #include <iostream>
-#include <sstream>
 #include <fstream>
 #include <algorithm>
 #include <vector>
@@ -32,47 +31,27 @@ int main(){
   //}
   //
 
-
-    std::string inp;
-    while (inp!="EXIT"){
+  for(int i = 0; i<=pals.size(); i++){
+    for(int j = 0;j<edWords.size();j++){
+      std::string palavra;
       std::cout<<">> ";
-
+      std::string inp;
       getline(std::cin, inp);
-
-      std::stringstream ss(inp);
-
-      while(ss){
-        std::string palavra;
-        ss >> palavra;
-
-        pals.push_back(palavra);
-        //std::cout<<palavra<<'\n';
-      }
-
-      for(int i = 0; i<=pals.size();i++){
-      //std::string palavra;
-      //std::cout<<">> ";
-      //getline(std::cin, inp);
       
-      //for (auto x : inp){
-        //if(x==' '){
-          //pals.push_back(palavra);
-        //}
-        //else
-          //palavra = palavra + x;
-      //}
-        for(int j =0;j<edWords.size();j++){
-          if (pals[i] == edWords[j]){
-            i+=IdFunc(pals,i);
-          }
+      for (auto x : inp){
+        if(x==' '){
+          pals.push_back(palavra);
         }
-        pals.clear();
-      //std::cout<<pals[i];
+        else
+          palavra = palavra + x;
       }
 
+      if(pals[i] == edWords[j]){
+        i+=IdFunc(pals,i);
+      }
     }
-  
- 
+      
+  }
 
 
 
