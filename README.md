@@ -1,6 +1,6 @@
 [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
 
-![](Gifs/gif.gif)
+![](Gifs/gif2.gif)
 
 # Lista com os comandos da edlang:
 
