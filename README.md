@@ -1,5 +1,7 @@
 [![Run on Repl.it](https://repl.it/badge/github/LucasPB710/EdLang)](https://repl.it/github/LucasPB710/EdLang)
 
+![](Gifs/gif.gif)
+
 # Lista com os comandos da edlang:
 
 (voce nao precisa ficar indo ao final do readme, no arquivo abaixo tem exemplos melhores")
@@ -10,7 +12,7 @@
 + 1.0 SOBRE
   - 1.1 Sobre o edlang
 + 2.0 COMO USAR NO REPLIT
-  -2.1 Usando shell no replit
+  - 2.1 Usando shell no replit
 + 3.0 COMO CRIAR UM ARQUIVO EM EDLANG
 + 4.0 HELLO WORLD
 + 5.0 IDEIAS QUE SERÃO ADICIONADAS E NOTAS SOBRE O QUE FOI ADICIONADO
@@ -56,10 +58,11 @@ Caso voce ja tenha criado, basta colocar o nome dele, se estiver tudo certo, ele
 
 Voce pode usar o test.edl para ver o que as coisas fazem (vai mudar com o tempo, conforme a lingua for mudando)
 
-## Usando shell no repl.it
+## 2.1 Usando shell no repl.it
 
 pra usar shell é bem simples, no lugar de clicar em run, no terminal do repl.it voce escreve os seguintes comandos:
-```make shell [ENTER]
+```
+   make shell [ENTER]
    make compila [ENTER] 
    ```
    
