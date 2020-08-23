@@ -56,8 +56,8 @@ Ed: nmrsBunitos
 ```ruby
 Melancia Dois 2
 Melancia Tres 3
-Jogue Dois < Tres ValeNada
+Jogue Dois < Tres SomenteParaGanhar
   Lenha Sussa ValeNada Supimpa ValeTudo
   Ed: Sussa
-ValeTudo
+NaoParaPerder
 ```
