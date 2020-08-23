@@ -197,7 +197,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
   //IF//    JOGUE <cond> ValeNada <comandos> ValeTudo
  //////     cond requer 3 argumentos, X comp Y -> x = string ou float y = mesmo tipo que x; comp -> ==, >, <;
  
-  else if (pals[pal] == "Jogue"){
+  else if (pals[pal] == "Jogue" && pals[pal] == "SomenteParaGanhar"){
 
     bool string = false, float_ = false;
     bool string2 = false, float_2 = false;
@@ -261,7 +261,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
     //procura posição do ValeTudo (ValeNada == pals[pal+4])
     int pValeTudo = 0, i = 0;
     while(pValeTudo == 0){
-      if(pals[pal+i] == "ValeTudo")
+      if(pals[pal+i] == "NaoParaPerder")
         pValeTudo = i;
       else if(i>=1000){
         pValeTudo = -2;

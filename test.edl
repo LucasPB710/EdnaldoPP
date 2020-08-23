@@ -11,10 +11,10 @@ Lenha TESTEIF ValeNada ISSO É VERDADE ValeTudo
 Lenha TESTEIF2 ValeNada abacate ValeTudo
 
 
-Jogue tres > seis ValeNada Ed: TESTEIF ValeTudo
-Jogue tres < seis ValeNada Ed: TESTEIF2 ValeTudo
+Jogue tres > seis SomenteParaGanhar Ed: TESTEIF NaoParaPerder
+Jogue tres < seis SomenteParaGanhar Ed: TESTEIF2 NaoParaPerder
 
-Jogue TESTEIF > TESTEIF2 ValeNada
+Jogue TESTEIF < TESTEIF2 SomenteParaGanhar
   Lenha TESTEIF ValeNada O testeif é maior que o testeif2 ValeTudo
   Ed: TESTEIF
-ValeTudo
+NaoParaPerder
