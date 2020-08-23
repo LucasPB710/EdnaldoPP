@@ -84,6 +84,8 @@ Ate agora no edlang a gente so tem essas coisas:
 
 - Chico+, Chico-, Chico*, Chico/
 
+- Jogue -> If 
+
 Funcionam da seguinte maneira
 
 + ``` Melancia <nome_da_int> <valor_da_int> ```
@@ -128,10 +130,14 @@ Ed: My_string
 
 - [X] Matematica (+,-,*,/)
 
-- [ ] IF (estruturado em if then endif / else then endelse)
++ [ ] IF (estruturado em if then endif / else then endelse)
+  - [X] IF    (jogue)
+  - [ ] Else  (somenteParaGanhar)
+  - [ ] Elif  (e nao para perder)
 
-- [ ] ELSE
 
 - [ ] WHILE
 
 - [ ] FOR
+
+O if que foi adicionado funciona de uma maneira bem tosca e provavelmente vai ter muitos erros, mas funciona, de um certo modo...
