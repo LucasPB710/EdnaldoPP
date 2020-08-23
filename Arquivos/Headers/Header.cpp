@@ -120,9 +120,15 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   }
 
-  else if(pals[pal] == "Chico+"){
+   /////////////////////
+  //INICIO MATEMATICA//
+ /////////////////////
+ 
+  else if(pals[pal] == "Chico+" || pals[pal] == "Chico-" || pals[pal] == "Chico*" || pals[pal] == "Chico/"){
     float p1,p2;
+    float resultado;
     bool achado = false;
+    int intPos;
 
     for(int i = 0; i<fun.intN_get().size(); i++){
       if (pals[pal+1] == fun.intN_get()[i]){
@@ -148,116 +154,49 @@ int IdFunc(std::vector<std::string> pals, int pal){
     if(!achado)
       p2 = stof(pals[pal+2]);
 
-    fun.intN_set(pals[pal+3]);
-    fun.intV_set(p1+p2);
-    
-    return 3;
-  }
-
-  //SUB
-  else if(pals[pal] == "Chico-"){
-    float p1,p2;
-    bool achado = false;
-
-    for(int i = 0; i<fun.intN_get().size(); i++){
-      if (pals[pal+1] == fun.intN_get()[i]){
-        p1 = fun.intV_get()[i];
-        i = fun.intN_get().size();
-        achado = true;
-      }
-    }
-
-    if(!achado)
-      p1 = stof(pals[pal+1]);
-
     achado = false;
 
-    for(int i = 0; i<fun.intN_get().size(); i++){
-      if (pals[pal+2] == fun.intN_get()[i]){
-        p2 = fun.intV_get()[i];
-        i = fun.intN_get().size();
+    for(int i =0; i < fun.intN_get().size(); i++){
+      if(pals[pal+3] == fun.intN_get()[i]){
         achado = true;
+        intPos = i;
       }
     }
 
-    if(!achado)
-      p2 = stof(pals[pal+2]);
+    if(achado){
+      if(pals[pal][5] == '+')
+        fun.intV_change(p1+p2, intPos);
+      else if(pals[pal][5] == '-')
+        fun.intV_change(p1-p2,intPos);
+      else if(pals[pal][5] == '*')
+        fun.intV_change(p1*p2,intPos);
+      else if(pals[pal][5] == '/')
+        fun.intV_change(p1/p2,intPos);
 
-    fun.intN_set(pals[pal+3]);
-    fun.intV_set(p1-p2);
-    
+    }
+
+    else{
+
+      fun.intN_set(pals[pal+3]);
+      if(pals[pal][5] == '+')
+        fun.intV_set(p1+p2);
+      else if(pals[pal][5] == '-')
+        fun.intV_set(p1-p2);
+      else if(pals[pal][5] == '*')
+        fun.intV_set(p1*p2);
+      else if(pals[pal][5] == '/')
+        fun.intV_set(p1/p2);
+      }
+      
     return 3;
+
   }
 
-  //MULT
-  else if(pals[pal] == "Chico*"){
-    float p1,p2;
-    bool achado = false;
+   //////
+  //IF//    JOGUE <cond> ValeNada <comandos> ValeTudo
+ //////
+ 
 
-    for(int i = 0; i<fun.intN_get().size(); i++){
-      if (pals[pal+1] == fun.intN_get()[i]){
-        p1 = fun.intV_get()[i];
-        i = fun.intN_get().size();
-        achado = true;
-      }
-    }
-
-    if(!achado)
-      p1 = stof(pals[pal+1]);
-
-    achado = false;
-
-    for(int i = 0; i<fun.intN_get().size(); i++){
-      if (pals[pal+2] == fun.intN_get()[i]){
-        p2 = fun.intV_get()[i];
-        i = fun.intN_get().size();
-        achado = true;
-      }
-    }
-
-    if(!achado)
-      p2 = stof(pals[pal+2]);
-
-    fun.intN_set(pals[pal+3]);
-    fun.intV_set(p1*p2);
-    
-    return 3;
-  }
-
-  //DIV
-  else if(pals[pal] == "Chico/"){
-    float p1,p2;
-    bool achado = false;
-
-    for(int i = 0; i<fun.intN_get().size(); i++){
-      if (pals[pal+1] == fun.intN_get()[i]){
-        p1 = fun.intV_get()[i];
-        i = fun.intN_get().size();
-        achado = true;
-      }
-    }
-
-    if(!achado)
-      p1 = stof(pals[pal+1]);
-
-    achado = false;
-
-    for(int i = 0; i<fun.intN_get().size(); i++){
-      if (pals[pal+2] == fun.intN_get()[i]){
-        p2 = fun.intV_get()[i];
-        i = fun.intN_get().size();
-        achado = true;
-      }
-    }
-
-    if(!achado)
-      p2 = stof(pals[pal+2]);
-
-    fun.intN_set(pals[pal+3]);
-    fun.intV_set(p1/p2);
-    
-    return 3;
-  }
 
   return 0 ;
 }
