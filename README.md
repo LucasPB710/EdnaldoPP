@@ -132,8 +132,8 @@ Ed: My_string
 
 + [ ] IF (estruturado em if then endif / else then endelse)
   - [X] IF    (jogue)
-  - [ ] Else  (somenteParaGanhar)
-  - [ ] Elif  (e nao para perder)
+  - [ ] Else  
+  - [ ] Elif  
 
 
 - [ ] WHILE
