@@ -1,0 +1,20 @@
+Melancia tres 3 
+
+Melancia Tres 3
+
+Melancia Qd 42
+
+Melancia seis 6 
+
+
+Lenha TESTEIF ValeNada ISSO É VERDADE ValeTudo
+Lenha TESTEIF2 ValeNada abacate ValeTudo
+
+
+Jogue tres > seis ValeNada Ed: TESTEIF ValeTudo
+Jogue tres < seis ValeNada Ed: TESTEIF2 ValeTudo
+
+Jogue TESTEIF > TESTEIF2 ValeNada
+  Lenha TESTEIF ValeNada O testeif é maior que o testeif2 ValeTudo
+  Ed: TESTEIF
+ValeTudo

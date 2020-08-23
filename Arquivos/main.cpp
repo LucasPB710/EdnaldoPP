@@ -7,8 +7,8 @@
 
 std::vector<std::string> ops{"=","+","-","*","/"};
 
-                                 //IF                THEN      ENDIF      INT        print   STRING  (           )          SOMA
-std::vector<std::string> edWords{"BirinaOCocoEhSeco","ValeTudo","ValeNada","Melancia","Ed:","Lenha","ValeNada","ValeTudo","Chico+",
+                                 //IF       THEN      ENDIF      INT        print   STRING  (           )          SOMA
+std::vector<std::string> edWords{"Jogue","ValeTudo","ValeNada","Melancia","Ed:","Lenha","ValeNada","ValeTudo","Chico+",
                                   "Chico-","Chico*","Chico/"};
 
 
