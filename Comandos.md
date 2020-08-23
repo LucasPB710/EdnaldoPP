@@ -10,13 +10,14 @@ obs: Delimitador = "", (), {}...
 
 obs: op = alguma dessas operações: +, -, *, /
 
-| NOME           | RECEBE                 | EQUIVALE A   |
-|:--------------:| ---------------------- |:------------:|
-| Melancia       | Float                  | Int          |
-| Ed:            | Float ou String        | Print        |
-| Lenha          | String                 | String       |
-| Vale Nada/Tudo |                        | Delimitador  |
-| Chico(op)      | Duas Ints ou floats    | +, -, * ou / |
+| NOME           | RECEBE                                               | EQUIVALE A   |
+|:--------------:| -----------------------------------------------------|:------------:|
+| Melancia       | Float                                                | Int          |
+| Ed:            | Float ou String                                      | Print        |
+| Lenha          | String                                               | String       |
+| Vale Nada/Tudo |                                                      | Delimitador  |
+| Chico(op)      | Duas Ints ou floats                                  | +, -, * ou / |
+| Jogue          | Uma comparação e o que sera feito caso seja verdade  | If           |
 
 ### Exemplos:
 
@@ -50,3 +51,13 @@ Ed: nmrsBunitos
 ```
 
 - realiza a operação * (multiplicação), armazena o resultado na int nmrsBunitos e coloca na tela
+
+##### Jogue
+```ruby
+Melancia Dois 2
+Melancia Tres 3
+Jogue Dois < Tres ValeNada
+  Lenha Sussa ValeNada Supimpa ValeTudo
+  Ed: Sussa
+ValeTudo
+```
