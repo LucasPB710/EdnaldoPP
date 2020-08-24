@@ -2,7 +2,7 @@
 
 ![](Gifs/gif2.gif)
 
-# Lista com os comandos da edlang:
+# Lista com os comandos de EdnaldoPP:
 
 (voce nao precisa ficar indo ao final do readme, no arquivo abaixo tem exemplos melhores")
 
@@ -23,7 +23,7 @@ if you are a gringo, you will not understand nada sobre esse coiso, va embora
 
 Edlang é um projeto que passa um arquivo (.edl, mas pode ser qualquer extensao) em um codigo escrito em c++ que realiza alguns comandos de acordo com o que tem no arquivo
 
-## 1.1 Sobre o edlang
+## 1.1 Sobre o EdnaldoPP (ednaldo++ ou ednaldo pereira plus, ou qualquer outra ideia criativa que venha na sua cabeça)
 
 É uma linguagem que lê palavra por palavra, entao tu pode fazer um codigo em uma linha
 
@@ -68,11 +68,11 @@ pra usar shell é bem simples, no lugar de clicar em run, no terminal do repl.it
    
 para ter um exemplo, basta ver o video no inicio desse arquivo
 
-# 3.0 COMO CRIAR UM ARQUIVO EM EDLANG
+# 3.0 COMO CRIAR UM ARQUIVO EM EdnaldoPP
 
 Crie um novo arquivo no Repl.it ou qualquer canto, pode ter qualquer extensão ou nenhuma (Ex.: arquivo, arquivo.txt, arquivo.edl...)
 
-Ate agora no edlang a gente so tem essas coisas:
+Ate agora no EdnaldoPP a gente so tem essas coisas:
 
 - Melancia -> int
 
@@ -116,7 +116,7 @@ OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer var
 
 # 4.0 O FAMOSO HELLO WORLD
 
-Hello world em EdLang seria:
+Hello world em EdnaldoPP seria:
 
 ```
 Lenha My_string ValeNada HELLO EDNALDO PEREIRA ValeTudo
