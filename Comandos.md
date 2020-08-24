@@ -2,7 +2,7 @@
 
 ## Lista de comandos
 
-que tu pode usar em um arquivo edlang
+que tu pode usar em um arquivo EdnaldoPP
 
 
 
