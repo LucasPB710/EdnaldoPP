@@ -114,7 +114,7 @@ OBS: por enquanto, so funciona com int e string, depois poderá ser qualquer var
   
   - salva o resultado da multipicação de 42 e 73 na int chamada NumerosBunitos
 
-# 4.0 O FAMOSO HELLO WORLD
+# 4.0 O HELLO WORLD
 
 Hello world em EdnaldoPP seria:
 
