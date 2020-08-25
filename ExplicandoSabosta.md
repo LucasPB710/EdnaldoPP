@@ -12,7 +12,7 @@ R2: Eu vivo me perdendo no Header.cpp, entao isso vai me dar uma noção de como
 
 ### Sumario: (dividido em arquivos)
 
-+ 1.0 [main.cpp](#1.0 - Main.cpp)
++ 1.0 [main.cpp](#1.0Main)
   
   + Sobre: nada de util, em geral, lê um arquivo e passa ele pro Header.cpp
 
@@ -28,7 +28,7 @@ R2: Eu vivo me perdendo no Header.cpp, entao isso vai me dar uma noção de como
 
 
 
-## 1.0 - Main.cpp
+## <a name="1.0Main"> 1.0 - Main.cpp </a>
 
 boralá
 
@@ -36,7 +36,7 @@ boralá
 
 ----------------------------------------------------------
 
-![](/home/lucas/Documentos/github/EdLang/Imagens%20uhu/main1.png)
+![](/Imagens%20uhu/main1.png)
 
 Ok, no inicio da pra ver um monte de include, eu vou falar o que cada um deles faz ao decorrer do arquivo, mas ja da pra perceber um bem importante nesse inicio
 
