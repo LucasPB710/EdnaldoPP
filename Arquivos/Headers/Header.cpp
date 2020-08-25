@@ -30,7 +30,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
       }
     }
 
-    
+
     if (intJaExiste){
       fun.intN_set(pals[pal+1]);
       fun.intV_change(stof(pals[pal+2]),posInt);
@@ -45,7 +45,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
         std::cout<<"Valor da string nao é numerico\nPalavra: "<<pals[pal+2]<<"\n";
      return 2;
     }
-   
+
   }
 
   else if(pals[pal] == "Ed:"){
@@ -67,7 +67,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
         fun.print(fun.intV_get()[i]);
         return 1;
       }
-      
+
     }
 
     return 1;
@@ -77,7 +77,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
     int pValeTudo = 0, i = 0, posStr;
     bool strJaExiste = false;
-    
+
     while(pValeTudo == 0 ){
       if(pals[pal+i] == "ValeTudo")
         pValeTudo = i;
@@ -103,7 +103,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
         Inp.append(pals[pal+2+j]);
         Inp.append(" ");
       }
-      
+
       if(strJaExiste){
         fun.strV_change(Inp, posStr);
       }
@@ -124,7 +124,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
    /////////////////////
   //INICIO MATEMATICA//
  /////////////////////
- 
+
   else if(pals[pal] == "Chico+" || pals[pal] == "Chico-" || pals[pal] == "Chico*" || pals[pal] == "Chico/"){
     float p1,p2;
     //float resultado;
@@ -188,7 +188,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
       else if(pals[pal][5] == '/')
         fun.intV_set(p1/p2);
       }
-      
+
     return 3;
 
   }
@@ -196,8 +196,8 @@ int IdFunc(std::vector<std::string> pals, int pal){
    //////
   //IF//    JOGUE <cond> ValeNada <comandos> ValeTudo
  //////     cond requer 3 argumentos, X comp Y -> x = string ou float y = mesmo tipo que x; comp -> ==, >, <;
- 
-  else if (pals[pal] == "Jogue" && pals[pal] == "SomenteParaGanhar"){
+
+  else if (pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar"){
 
     bool string = false, float_ = false;
     bool string2 = false, float_2 = false;
@@ -205,7 +205,6 @@ int IdFunc(std::vector<std::string> pals, int pal){
     int strPos2, fPos2;
     int comp; // 1 -> ==; 2 -> >, 3 -> <, 4 -> !=
     bool acontece = false;
-
 
 
     if(fun.strN_get().size() > 0){
@@ -223,7 +222,7 @@ int IdFunc(std::vector<std::string> pals, int pal){
       }
     }
 
-    
+
     if (fun.intN_get().size() > 0){
       //Verifica se é float [x]
       for(long int i = 0; i<fun.intN_get().size(); i++){
@@ -336,10 +335,14 @@ int IdFunc(std::vector<std::string> pals, int pal){
     //Realiza as operações, caso aconteça (ou seja, a comparação seja verdade)
     if (acontece){
       acontece = false;
-      IdFunc(pals,pal+5);
+      i = 5;
+      while(pals[pal+i] != "NaoParaPerder"){
+          IdFunc(pals, pal+i);
+          i++;
+        }
       if(!acontece)
         return pValeTudo;
-     
+
 //      return pal+5;
     }
 
@@ -348,6 +351,19 @@ int IdFunc(std::vector<std::string> pals, int pal){
 
   }
 
+  else if(pals[pal] == "Jogue" && pals[pal+4] != "SomenteParaGanhar"){
+    int pValeTudo = 0, i = 0;
+    while(pValeTudo == 0){
+      if(pals[pal+i] == "NaoParaPerder")
+        pValeTudo = i;
+      else if(i>=1000){
+        pValeTudo = -2;
+      }
+      i++;
+    }
+    return pValeTudo;
+
+  }
    //////////
   //FIM IF//
  //////////
@@ -365,11 +381,11 @@ std::vector<float> Funcs::intV_get(){
 }
 
 void Funcs::intV_set(float inp){
- intVars.push_back(inp); 
+ intVars.push_back(inp);
 }
 
 void Funcs::intV_change(float inp, int pos){
- intVars[pos] = inp; 
+ intVars[pos] = inp;
 }
 
 std::vector<std::string> Funcs::intN_get(){
@@ -377,7 +393,7 @@ std::vector<std::string> Funcs::intN_get(){
 }
 
 void Funcs::intN_set(std::string inp){
- intNames.push_back(inp); 
+ intNames.push_back(inp);
 }
 
 int Funcs::intS_get(){
