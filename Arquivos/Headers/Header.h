@@ -30,7 +30,6 @@ class Funcs{
     void strV_change(std::string inp, int pos);
 
 
-
   private:
     std::vector<float> intVars;
     std::vector<std::string> intNames;
