@@ -51,8 +51,6 @@ ok, não tem muito o que explicar aqui, eu basicamente uso o fstream pra abrir u
 
 ----------------------------------------------------------
 
-
-
 ### 1.3 - Fim do main e abertura das portas do inferno
 
 ![](Imagens%20uhu/main3.png)
