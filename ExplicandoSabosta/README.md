@@ -169,7 +169,7 @@ isso será uma analise do que acontece quando o programa identifica a palavra me
 
 lembrando que melancia requer dois argumentos:
 
-Melancia <nome_do_float> melancia <valor_do_float>
+Melancia \<nome_do_float> \<valor_do_float>
 
 ![](Imagens%20uhu/Header.cpp1.png)
 
