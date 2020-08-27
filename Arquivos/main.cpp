@@ -34,12 +34,15 @@ int main(){
     for(int j = 0;j<edWords.size();j++){
       if(pals[i] == edWords[j]){
         i+=IdFunc(pals,i);
+        
       }
     }
       
   }
+  std::cin.ignore();
+  std::cin.get();
 
-
+  
 
 
   return 0;

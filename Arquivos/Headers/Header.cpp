@@ -396,14 +396,6 @@ void Funcs::intN_set(std::string inp){
  intNames.push_back(inp);
 }
 
-int Funcs::intS_get(){
-  return intSize;
-}
-
-void Funcs::intS_set(float inp){
-  intSize = inp;
-
-}
 
 std::vector<std::string> Funcs::strV_get(){ return strVars; }
 std::vector<std::string> Funcs::strN_get(){ return strNames; }

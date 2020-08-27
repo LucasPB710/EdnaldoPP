@@ -1,1 +1,0 @@
-g++ Arquivos/main.cpp Arquivos/Headers/Header.cpp
