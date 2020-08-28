@@ -22,3 +22,15 @@ Jogue TESTEIF > TESTEIF2 SomenteParaGanhar
   Lenha TESTEIF ValeNada UNIAO SOVIETICA ValeTudo
   Ed: TESTEIF
 NaoParaPerder
+
+Melancia t1 40
+Melancia t2 0
+Melancia t3 0
+
+VamosBrilhar t1 > t2 ComoUmDiamante
+Ed: t2
+Chico+ t2 2 t2
+NessaGeracaoMarcante
+
+Lenha saindo ValeNada saindo do while ValeTudo
+Ed: saindo

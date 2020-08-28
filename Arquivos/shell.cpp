@@ -14,7 +14,8 @@ std::vector<std::string> edWords{"Jogue","ValeTudo","ValeNada","Melancia","Ed:",
 
 
 int main(){
-  
+  Funcs fun;
+
   //std::string arqName;
   //std::cout<<"Nome do arquivo: ";
   //std::cin>> arqName;
@@ -79,7 +80,7 @@ int main(){
           for(int i = 0; i<=pals.size();i++){
             for(int j =0;j<edWords.size();j++){
               if (pals[i] == edWords[j]){
-                i+=IdFunc(pals,i);
+                i+=IdFunc(pals,i, fun);
               }
             }
           }
@@ -98,7 +99,7 @@ int main(){
       for(int i = 0; i<=pals.size();i++){
         for(int j =0;j<edWords.size();j++){
           if (pals[i] == edWords[j]){
-            i+=IdFunc(pals,i);
+            i+=IdFunc(pals,i, fun);
           }
         }
         pals.clear();

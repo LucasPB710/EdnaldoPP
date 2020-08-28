@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 
-int IdFunc(std::vector<std::string> pals, int pal);
+
 
 void pal_set(int inp);
 void pals_set(std::vector<std::string> inp);
@@ -43,3 +43,5 @@ class Funcs{
     int pal;
 
 };
+
+int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun); 

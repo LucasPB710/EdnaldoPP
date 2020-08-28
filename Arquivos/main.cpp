@@ -3,17 +3,18 @@
 #include <algorithm>
 #include <vector>
 #include "Headers/Header.h"
+#include "Headers/IF.h"
 
 
 std::vector<std::string> ops{"=","+","-","*","/"};
 
-                                 //IF       THEN      ENDIF      INT        print   STRING  (           )          SOMA
-std::vector<std::string> edWords{"Jogue","ValeTudo","ValeNada","Melancia","Ed:","Lenha","ValeNada","ValeTudo","Chico+",
-                                  "Chico-","Chico*","Chico/"};
+                                 //INT        print   STRING  SOMA ...
+std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/"};
 
 
 int main(){
-  
+  Funcs fun;
+
   std::string arqName;
   std::cout<<"Nome do arquivo: ";
   std::cin>> arqName;
@@ -32,9 +33,14 @@ int main(){
 
   for(int i = 0; i<pals.size(); i++){
     for(int j = 0;j<edWords.size();j++){
-      if(pals[i] == edWords[j]){
-        i+=IdFunc(pals,i);
-        
+      if (pals[i] == "Jogue"){
+        i+=IF(pals,i, fun, 1);
+      }
+      else if(pals[i] == edWords[j]){
+        i+=IdFunc(pals,i, fun); 
+      }
+      else if(pals[i] == "VamosBrilhar"){
+        i+=WHILE(pals, i, fun);
       }
     }
       
