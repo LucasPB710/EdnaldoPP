@@ -2,6 +2,11 @@
 
 ![](Gifs/gif2.gif)
 
+# HOW TO USE (For the repl.it jam)
+
+You can create a file with any extension that you want, you can find sample files in the folders Arquivos, or in Arquivos/Windows, you will find some .epp or .edl files, if you want to know what each command does: [commands](Comands.md)
+
+
 # Lista com os comandos de EdnaldoPP:
 
 (voce nao precisa ficar indo ao final do readme, no arquivo abaixo tem exemplos melhores")
