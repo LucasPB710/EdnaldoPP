@@ -10,15 +10,15 @@ obs: Delimitador = "", (), {}...
 
 obs: op = alguma dessas operações: +, -, *, /
 
-| NOME           | RECEBE                                               | EQUIVALE A   |
-|:--------------:| -----------------------------------------------------|:------------:|
-| Melancia       | Float                                                | Int          |
-| Ed:            | Float ou String                                      | Print        |
-| Lenha          | String                                               | String       |
-| Vale Nada/Tudo |                                                      | Delimitador  |
-| Chico(op)      | Duas Ints ou floats                                  | +, -, * ou / |
-| Jogue          | Uma comparação e o que sera feito caso seja verdade  | If           |
-| VamosBrilhar   | Comparação e o que sera feito caso seja verdade      | While        |
+| NOME             | RECEBE                                               | EQUIVALE A   |
+|:----------------:| -----------------------------------------------------|:------------:|
+| Melancia         | Float                                                | Int          |
+| Ed:              | Float ou String                                      | Print        |
+| Lenha            | String                                               | String       |
+| Vale Nada/Tudo   |                                                      | Delimitador  |
+| Chico(op)        | Duas Ints ou floats                                  | +, -, * ou / |
+| Jogue            | Uma comparação e o que sera feito caso seja verdade  | If           |
+| VamosBrilhar     | Comparação e o que sera feito caso seja verdade      | While        |
 
 ### Exemplos:
 
@@ -52,6 +52,7 @@ Ed: nmrsBunitos
 ```
 
 - realiza a operação * (multiplicação), armazena o resultado na int nmrsBunitos e coloca na tela
+- Chico+* x y z executaria-> z \*= x*y; tambem poderia ser: Chico+* x y y -> x \*= y;
 
 ##### Jogue
 ```ruby
