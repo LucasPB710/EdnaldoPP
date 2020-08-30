@@ -9,7 +9,7 @@
 std::vector<std::string> ops{"=","+","-","*","/"};
 
                                  //INT        print   STRING  SOMA ...
-std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/"};
+std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:"};
 
 
 int main(){
@@ -19,6 +19,7 @@ int main(){
   std::cout<<"Nome do arquivo: ";
   std::cin>> arqName;
   std::ifstream arq(arqName);
+  std::cin.ignore();
 
   std::vector<std::string> pals;
 

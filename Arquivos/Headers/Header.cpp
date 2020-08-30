@@ -49,13 +49,16 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
   }
 
-  else if(pals[pal] == "Ed:"){
+  else if(pals[pal] == "Ed:" || pals[pal] == "EdP:"){
 
     //checa se é string
     for(int i =0; i<fun.strN_get().size(); i++){
 
       if(pals[pal+1] == fun.strN_get()[i]){
         fun.print(fun.strV_get()[i]);
+        if(pals[pal][2] == 'P'){
+          fun.printL();
+        }
         return 1;
       }
 
@@ -66,6 +69,9 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
       if(pals[pal+1] == fun.intN_get()[i]){
         fun.print(fun.intV_get()[i]);
+        if(pals[pal][2] == 'P'){
+          fun.printL();
+        }
         return 1;
       }
 
@@ -201,9 +207,87 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
   }
 
-   //////
-  //IF//    JOGUE <cond> ValeNada <comandos> ValeTudo
- //////     cond requer 3 argumentos, X comp Y -> x = string ou float y = mesmo tipo que x; comp -> ==, >, <;
+  //INPUT
+  //-> WhatIsThe: Nome_da_int_string Valor
+  else if(pals[pal] == "WhatIsThe:"){
+    //verfica se existe e é int ou string
+    bool existe = false;
+    int pos;
+    int tipo; //1-string 2-int
+    std::string inp;
+    getline(std::cin,inp);
+
+    if(fun.strN_get().size()>0){
+      for(int i =0; i < fun.strN_get().size();i++){
+        if(pals[pal+1] == fun.strN_get()[i]){
+          pos = i;
+          existe = true;
+          tipo = 1;
+          i = fun.strN_get().size();
+        }
+      }
+    }
+    
+    if(fun.intN_get().size()){
+      for(int i =0; i < fun.intN_get().size();i++){
+        if(pals[pal+1] == fun.intN_get()[i]){
+          pos = i;
+          existe = true;
+          tipo = 2;
+          i = fun.intN_get().size();
+        }
+      }
+    }
+
+    if(!existe){
+      int d = 0;
+      for(int i = 0; i<inp.length(); i++){
+        if(isdigit(inp[i]))
+          d++;
+      }
+      if(d == inp.length())
+        tipo = 2;
+      else
+        tipo = 1;
+    }
+
+    if(existe){
+      
+      switch(tipo){
+        case 1:
+          fun.strV_change(inp, pos);
+          return 1;
+          break;
+        case 2:
+          fun.intV_change(stof(inp), pos);
+          return 1;
+          break;
+        default:
+          return 1;
+          break;        
+      }
+    }
+
+    else if(!existe){
+      switch(tipo){
+        case 1:
+          fun.strV_set(inp);
+          fun.strN_set(pals[pal+1]);
+          return 1;
+          break;
+        case 2:
+          fun.intV_set(stof(inp));
+          fun.intN_set(pals[pal+1]);
+          return 1;
+          break;
+        default:
+          return 1;
+          break;        
+      }
+    }
+    return 1;
+
+  }
 
   
 
@@ -253,6 +337,6 @@ void Funcs::strV_change(std::string inp, int pos){
 
 
 
-void Funcs::print(std::string inp){ std::cout<<inp<<std::endl; }
-void Funcs::print(int inp){std::cout<<inp<<std::endl;}
-void Funcs::print(float inp){std::cout<<inp<<std::endl;}
+void Funcs::printL(){std::cout<<'\n';}
+void Funcs::print(std::string inp){ std::cout<<inp;}
+void Funcs::print(float inp){std::cout<<inp;}

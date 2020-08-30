@@ -11,9 +11,9 @@ class Funcs{
   public:
     //void if_();
     //
-    void print(std::string inp);
-    void print(int inp);
+    void printL();
     void print(float inp);
+    void print(std::string inp);
 
     //gets
     std::vector<float> intV_get();

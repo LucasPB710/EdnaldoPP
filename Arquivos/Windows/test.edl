@@ -20,7 +20,7 @@ Jogue tres == Qd SomenteParaGanhar Ed: TESTEIF Ed: TESTEIF2 NaoParaPerder
 
 Jogue TESTEIF > TESTEIF2 SomenteParaGanhar
   Lenha TESTEIF ValeNada UNIAO SOVIETICA ValeTudo
-  Ed: TESTEIF
+  EdP: TESTEIF
 NaoParaPerder
 
 Melancia t1 40

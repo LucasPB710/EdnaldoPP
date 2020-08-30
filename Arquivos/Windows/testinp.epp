@@ -1,0 +1,16 @@
+Lenha pergunta ValeNada Qual Seu Nome? : ValeTudo
+
+Ed: pergunta
+WhatIsThe: Brother
+EdP: Brother
+
+Melancia idade 90
+Lenha pergunta ValeNada Qual sua idade? : ValeTudo
+
+Ed: pergunta
+WhatIsThe: idade
+
+Lenha afirmacao ValeNada tem: ValeTudo
+Lenha anos ValeNada anos ValeTudo
+Ed: Brother Ed: afirmacao Ed: idade Ed: anos
+
