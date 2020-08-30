@@ -4,15 +4,21 @@
 
 obs: op = some of these operations: +, -, *, /
 
-| NOME             | RECEBE                                                          | EQUIVALE A   |
-|:----------------:| ----------------------------------------------------------------|:------------:|
-| Melancia         | Float                                                           | Int          |
-| Ed:              | Float or String                                                 | Print        |
-| Lenha            | String                                                          | String       |
-| Vale Nada/Tudo   |                                                                 | Delimitador  |
-| Chico(op)        | Two Ints or floats                                              | +, -, * ou / |
-| Jogue            | one comparison that if its true will execute what comes next    | If           |
-| VamosBrilhar     | one comparison that while its true will execute what comes next | While        |
+| NAME             | RECEIVE                                                         | SAME AS        |
+|:----------------:| ----------------------------------------------------------------|:--------------:|
+| Melancia         | Float                                                           | Int            |
+| Ed:              | Float or String                                                 | Print          |
+| Lenha            | String                                                          | String         |
+| Vale Nada/Tudo   |                                                                 | Delimitador    |
+| Chico(op)        | Two Ints or floats                                              | +, -, * ou /   |
+| Jogue            | one comparison that if its true will execute what comes next    | If             |
+| VamosBrilhar     | one comparison that while its true will execute what comes next | While          |
+| WhatIsThe: (name)| user input, can be string or float                              | Input, std::cin|
+
+### OBS: Ed:
+
+Ed: prints just what is given to him, you cannot say something like "Ed: name \n" to have a new line, the equivalent of Ed: \n would be EdP:
+EdP: prints what is given to him plus a new line at the end
 
 ### Examples:
 
@@ -76,3 +82,13 @@ Ed: total
 ```
 
 - this program runs VamosBrilhar, that its the same as an while, in the example we calculate the factorial of 5 ( 5! = 120 )
+
+##### WhatIsThe: 
+```ruby
+Lenha name ValeNada Whats your name? : ValeTudo
+Ed: name
+WhatIsThe: Brother
+Lenha name ValeNada Your name is: ValeTudo
+Ed: name Ed: Brother
+```
+- in this example we have Brother, that will be what the user types, can be a float (if he types a number) or a string (if he types a string)
