@@ -18,6 +18,7 @@ obs: op = alguma dessas operações: +, -, *, /
 | Vale Nada/Tudo |                                                      | Delimitador  |
 | Chico(op)      | Duas Ints ou floats                                  | +, -, * ou / |
 | Jogue          | Uma comparação e o que sera feito caso seja verdade  | If           |
+| VamosBrilhar   | Comparação e o que sera feito caso seja verdade      | While        |
 
 ### Exemplos:
 
@@ -60,4 +61,20 @@ Jogue Dois < Tres SomenteParaGanhar
   Lenha Sussa ValeNada Supimpa ValeTudo
   Ed: Sussa
 NaoParaPerder
+```
+
+##### VamosBrilhar
+```ruby
+Melancia t1 4
+Melancia total 1
+Melancia t2 1
+Melancia Qnt 5
+
+VamosBrilhar Qnt > t2 ComoUmDiamante
+Chico+* t1 Qnt total
+Chico- Qnt 2 Qnt
+Chico- t1 2 t1
+NessaGeracaoMarcante
+
+Ed: total
 ```
