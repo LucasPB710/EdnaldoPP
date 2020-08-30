@@ -136,7 +136,7 @@ Ed: My_string
   - [ ] Elif  
 
 
-- [ ] WHILE
+- [X] WHILE
 
 - [ ] FOR
 
