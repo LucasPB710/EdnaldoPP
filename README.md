@@ -6,6 +6,18 @@
 
 You can create a file with any extension that you want, you can find sample files in the folders Arquivos, or in Arquivos/Windows, you will find some .epp or .edl files, if you want to know what each command does: [commands](Comands.md)
 
+after you create the ednaldo++ file, you can click in the RUN button, will ask for a file name, so you put the name or path to the file you just created
+
+one important thing in Ednaldo++ is the spaces, if you type Ed:Myvar the program will not understand, but if you type Ed: MyVar, the program will run fine
+
+### Who is ~~the sister~~ Ednaldo Pereira and what is Ednaldo++ (or ednaldoPP)
+
+Ednaldo pereira is a brazilian singer, he is often associated with some memes.
+
+This ""Programing language"" is based on his speechs and lyrics 
+
+~~the sister~~ is a reference to his song "Who is the sister"
+
 
 # Lista com os comandos de EdnaldoPP:
 
