@@ -14,7 +14,7 @@ one important thing in Ednaldo++ is the spaces, if you type Ed:Myvar the program
 
 Ednaldo pereira is a brazilian singer, he is often associated with some memes.
 
-This ""Programing language"" is based on his speechs and lyrics 
+This ""Programing language"" is based on his speechs and lyrics. I really didn't put much effort into it, so yes, we have many bugs and other things. In fact, this PL was not meant to be a part of the jam, so you can just ignore this, and have a good day testing new PLs.
 
 ~~the sister~~ is a reference to his song "Who is the sister"
 
