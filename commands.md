@@ -2,34 +2,28 @@
 
 ## Lista de comandos
 
-que tu pode usar em um arquivo EdnaldoPP
+obs: op = some of these operations: +, -, *, /
 
+| NOME             | RECEBE                                                          | EQUIVALE A   |
+|:----------------:| ----------------------------------------------------------------|:------------:|
+| Melancia         | Float                                                           | Int          |
+| Ed:              | Float or String                                                 | Print        |
+| Lenha            | String                                                          | String       |
+| Vale Nada/Tudo   |                                                                 | Delimitador  |
+| Chico(op)        | Two Ints or floats                                              | +, -, * ou / |
+| Jogue            | one comparison that if its true will execute what comes next    | If           |
+| VamosBrilhar     | one comparison that while its true will execute what comes next | While        |
 
-
-obs: Delimitador = "", (), {}...
-
-obs: op = alguma dessas operações: +, -, *, /
-
-| NOME             | RECEBE                                               | EQUIVALE A   |
-|:----------------:| -----------------------------------------------------|:------------:|
-| Melancia         | Float                                                | Int          |
-| Ed:              | Float ou String                                      | Print        |
-| Lenha            | String                                               | String       |
-| Vale Nada/Tudo   |                                                      | Delimitador  |
-| Chico(op)        | Duas Ints ou floats                                  | +, -, * ou / |
-| Jogue            | Uma comparação e o que sera feito caso seja verdade  | If           |
-| VamosBrilhar     | Comparação e o que sera feito caso seja verdade      | While        |
-
-### Exemplos:
+### Examples:
 
 ##### Melancia / Ed:
 
-```php
+```ruby
 Melancia 2 DOIS
 Ed: DOIS
 ```
 
-- criamos uma variavel chamada DOIS que armazena o valor 2, em seguida, colocamos o valor na tela
+- create a variable called DOIS (two, in portuguese), that holds the value 2, next, we print the value
 
 
 
@@ -40,7 +34,7 @@ Lenha MeuNome ValeNada Ednaldo Pereira ValeTudo
 Ed: MeuNome
 ```
 
-- Cria string chamada MeuNome que tem o calor "Ednaldo pereira" e coloca na tela
+- Create string called MeuNome (MyName, in portuguese) that holds the value "Ednaldo pereira" then print the value
 
 
 
@@ -51,15 +45,16 @@ Chico* 42 73 nmrsBunitos
 Ed: nmrsBunitos
 ```
 
-- realiza a operação * (multiplicação), armazena o resultado na int nmrsBunitos e coloca na tela
-- Chico+* x y z executaria-> z \*= x*y; tambem poderia ser: Chico+* x y y -> x \*= y;
+- Make the operation * (multiply) with the numbers 42 and 73, then the float nmrsBunitos (beatufil numbers in portuguese) then we print to the screen
+- Chico+* x y z, would do z \*= x*y; or Chico+* x y y would do y \*= x;
+- the same applies for the other operations (Chico++ x y y -> y += x; Chico+- x y y -> y -= x; Chico+/ x y y -> y /= x)
 
 ##### Jogue
 ```ruby
-Melancia Dois 2
-Melancia Tres 3
-Jogue Dois < Tres SomenteParaGanhar
-  Lenha Sussa ValeNada Supimpa ValeTudo
+Melancia two 2
+Melancia three 3
+Jogue two < three SomenteParaGanhar
+  Lenha Sussa ValeNada This is a if  ValeTudo
   Ed: Sussa
 NaoParaPerder
 ```
@@ -79,3 +74,5 @@ NessaGeracaoMarcante
 
 Ed: total
 ```
+
+- this program runs VamosBrilhar, that its the same as an while, in the example we calculate the factorial of 5 ( 5! = 120 )
