@@ -4,7 +4,7 @@
 
 # HOW TO USE (For the repl.it jam)
 
-You can create a file with any extension that you want, you can find sample files in the folders Arquivos, or in Arquivos/Windows, you will find some .epp or .edl files, if you want to know what each command does: [commands](Comands.md)
+You can create a file with any extension that you want, you can find sample files in the folders Arquivos, or in Arquivos/Windows, you will find some .epp or .edl files, if you want to know what each command does: [commands](commands.md)
 
 after you create the ednaldo++ file, you can click in the RUN button, will ask for a file name, so you put the name or path to the file you just created
 
