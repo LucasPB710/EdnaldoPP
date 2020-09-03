@@ -52,8 +52,8 @@ Ed: nmrsBunitos
 ```
 
 - Make the operation * (multiply) with the numbers 42 and 73, then the float nmrsBunitos (beatufil numbers in portuguese) then we print to the screen
-- Chico+* x y z, would do z \*= x*y; or Chico+* x y y would do y \*= x;
-- the same applies for the other operations (Chico++ x y y -> y += x; Chico+- x y y -> y -= x; Chico+/ x y y -> y /= x)
+- (W.I.P) Chico+* x y z, would do z \*= x*y; or Chico+* x y y would do y \*= x;
+- (W.I.P) the same applies for the other operations (Chico++ x y y -> y += x; Chico+- x y y -> y -= x; Chico+/ x y y -> y /= x)
 
 ##### Jogue
 ```ruby
