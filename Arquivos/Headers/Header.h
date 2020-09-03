@@ -2,8 +2,6 @@
 #include <vector>
 #include <iostream>
 
-
-
 void pal_set(int inp);
 void pals_set(std::vector<std::string> inp);
 

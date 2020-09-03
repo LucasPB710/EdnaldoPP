@@ -8,7 +8,6 @@
 int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun);
 
 int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
-  
 
   bool intJaExiste = false;
   int posInt;
@@ -20,7 +19,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
       if(isdigit(pals[pal+2][i]))
         d++;
-      else if(pals[pal+2][i] == '.')
+      else if(pals[pal+2][i] == '.' || pals[pal+2][i] == '-')
         d++;
     }
 
@@ -132,7 +131,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
   //INICIO MATEMATICA//
  /////////////////////
 
-  else if(pals[pal] == "Chico+" || pals[pal] == "Chico-" || pals[pal] == "Chico*" || pals[pal] == "Chico/" || pals[pal] == "Chico+*"){
+  else if(pals[pal] == "Chico+" || pals[pal] == "Chico-" || pals[pal] == "Chico*" || pals[pal] == "Chico/" || pals[pal] == "Chico+*" || pals[pal] == "Chico++"|| pals[pal] == "Chico+-" || pals[pal] == "Chico+/"){
     float p1,p2;
     //float resultado;
     bool achado = false;
@@ -171,7 +170,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
       }
     }
 
-    if(achado && pals[pal] != "Chico+*"){
+    if(achado && pals[pal] == "Chico+" && pals[pal] == "Chico-" && pals[pal] == "Chico*" && pals[pal] == "Chico/"){
       if(pals[pal][5] == '+')
         fun.intV_change(p1+p2, intPos);
       else if(pals[pal][5] == '-')
@@ -184,14 +183,49 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     }
 
     //ESPECIFICO PRO FATORIAL
-    else if(achado && pals[pal] == "Chico+*"){
+    else if(achado && (pals[pal] == "Chico+*" || pals[pal] == "Chico++" || pals[pal] == "Chico+-" || pals[pal] == "Chico+/")){
+
       int temp = fun.intV_get()[intPos];
-      fun.intV_change(p1*p2*temp, intPos);
+
+      if(pals[pal][6] == '*'){
+        fun.intV_change(p1*p2*temp, intPos);
+      }
+
+      if(pals[pal][6] == '-'){
+        fun.intV_change(p1-p2-temp, intPos);
+      }
+
+      if(pals[pal][6] == '+'){
+        fun.intV_change(p1+p2+temp, intPos);
+      }
+
+      if(pals[pal][6] == '/'){
+        fun.intV_change(p1/p2/temp, intPos);
+      }
+
+      // switch(pals[pal][6]){
+      //   case('*'):
+      //     fun.intV_change(p1*p2*temp, intPos);
+      //     std::cout<<"jorge";
+      //     break;
+      //   case('+'):
+      //     fun.intV_change(p1+p2+temp, intPos);
+      //     std::cout<<"jorge";
+      //     break;
+      //   case('-'):
+      //     fun.intV_change(p1-p2-temp, intPos);
+      //     break;
+      //   case('/'):
+      //     fun.intV_change(p1/p2/temp, intPos);
+      //     break;
+      //   default:
+      //     break;
+
+      // }
 
     }
 
     else{
-
       fun.intN_set(pals[pal+3]);
       if(pals[pal][5] == '+')
         fun.intV_set(p1+p2);
@@ -209,7 +243,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
   //INPUT
   //-> WhatIsThe: Nome_da_int_string Valor
-  else if(pals[pal] == "WhatIsThe:"){
+  else if(pals[pal] == "WhatIsThe:"){ 
     //verfica se existe e é int ou string
     bool existe = false;
     int pos;

@@ -9,7 +9,8 @@
 std::vector<std::string> ops{"=","+","-","*","/"};
 
                                  //INT        print   STRING  SOMA ...
-std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:"};
+std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:",
+                                    "Chico+*","Chico+/","Chico++","Chico+-"};
 
 
 int main(){
