@@ -8,10 +8,8 @@
 
 std::vector<std::string> ops{"=","+","-","*","/"};
 
-                                 //IF                THEN      ENDIF      INT        print   STRING  (           )          SOMA
-std::vector<std::string> edWords{"Jogue","ValeTudo","ValeNada","Melancia","Ed:","Lenha","ValeNada","ValeTudo","Chico+",
-                                  "Chico-","Chico*","Chico/"};
-
+std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:",
+                                    "Chico+*","Chico+/","Chico++","Chico+-"};
 
 int main(){
   Funcs fun;

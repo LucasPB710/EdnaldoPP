@@ -50,31 +50,62 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
   else if(pals[pal] == "Ed:" || pals[pal] == "EdP:"){
 
+    int tipo = -1; //0 - stringJaExistente; 1 - float ja existente; 2 - float nova; 3 - string nova
+
     //checa se é string
     for(int i =0; i<fun.strN_get().size(); i++){
 
       if(pals[pal+1] == fun.strN_get()[i]){
         fun.print(fun.strV_get()[i]);
-        if(pals[pal][2] == 'P'){
-          fun.printL();
-        }
-        return 1;
+        tipo = 0;
       }
 
     }
 
     //checa se é uma int
+    if (tipo == -1){
     for (int i = 0; i<fun.intN_get().size();i++){
 
       if(pals[pal+1] == fun.intN_get()[i]){
         fun.print(fun.intV_get()[i]);
-        if(pals[pal][2] == 'P'){
-          fun.printL();
-        }
-        return 1;
+        tipo = 1;
       }
 
     }
+    }
+
+  //verifica se é um digito
+    if (tipo == -1){
+      int d =0;
+      for (int i =0; i<pals[pal+1].size(); i++){   
+        if(isdigit(pals[pal+1][i]))
+          d++;
+      }
+
+      if(d == pals[pal+1].size()){
+        fun.print(pals[pal+1]);
+        tipo = 2;
+      }
+    }
+
+
+    //Verifica se é uma string
+    if(tipo == -1){
+      if (pals[pal+1][0] == '"' && pals[pal+1][pals[pal+1].size()-1] == '"'){
+        pals[pal+1].erase(pals[pal+1].begin());
+
+        pals[pal+1].erase(pals[pal+1].size()-1);
+        fun.print(pals[pal+1]);
+
+      }
+
+    }
+    
+
+    if(pals[pal][2] == 'P'){
+        fun.printL();
+    }
+
 
     return 1;
   }
