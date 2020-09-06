@@ -1,0 +1,10 @@
+WhatIsThe: b1
+WhatIsThe: b2
+WhatIsThe: b3
+WhatIsThe: b4
+
+chico* b1 b2 t1
+chico* b3 b4 t2
+chico- t1 t2 total
+
+ed: "DIFERENCA\_=\_" edp: total

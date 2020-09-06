@@ -7,7 +7,8 @@ bool ifAcontece = false;
 int IF(std::vector<std::string> pals, int pal, Funcs& fun, int op);
 
 int IF(std::vector<std::string> pals, int pal, Funcs& fun, int op){
-if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] == "VamosBrilhar" && pals[pal+4] == "ComoUmDiamante")){
+if (((pals[pal] == "Jogue" || pals[pal] == "jogue") && (pals[pal+4] == "SomenteParaGanhar" || pals[pal+4] == "somente_para_ganhar")) 
+|| ((pals[pal] == "VamosBrilhar"|| pals[pal] == "vamos_brilhar") && (pals[pal+4] == "ComoUmDiamante" || pals[pal+4] == "como_um_diamante"))){
 
     bool string = false, float_ = false;
     bool string2 = false, float_2 = false;
@@ -71,7 +72,7 @@ if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] =
     int pValeTudo = 0, i = 0;
     if (op == 1){   
       while(pValeTudo == 0){
-        if(pals[pal+i] == "NaoParaPerder")
+        if(pals[pal+i] == "NaoParaPerder" || pals[pal+i] == "nao_para_perder")
           pValeTudo = i;
         else if(i>=1000){
           pValeTudo = -2;
@@ -82,7 +83,7 @@ if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] =
     
     if (op == 2){
       while(pValeTudo == 0){
-        if(pals[pal+i] == "NessaGeracaoMarcante")
+        if(pals[pal+i] == "EmUmaGeracaoMarcante"|| pals[pal+1] == "em_uma_geracao_marcante")
           pValeTudo = i;
         else if(i>=1000){
           pValeTudo = -2;
@@ -160,7 +161,7 @@ if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] =
     if (acontece && op == 1){
       acontece = false;
       i = 5;
-      while(pals[pal+i] != "NaoParaPerder"){
+      while(pals[pal+i] != "NaoParaPerder" || pals[pal+i] != "nao_para_perder"){
           IdFunc(pals, pal+i, fun); 
           i+=1;  
         }
@@ -168,6 +169,7 @@ if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] =
         return pValeTudo;
 //      return pal+5;
     }
+
     else if(acontece && op == 2){
       return 1;
     }
@@ -177,10 +179,10 @@ if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] =
 
   }
 
-  else if(pals[pal] == "Jogue" && pals[pal+4] != "SomenteParaGanhar"){
+  else if((pals[pal] == "Jogue" || pals[pal] == "jogue") && (pals[pal+4] != "SomenteParaGanhar" || pals[pal+4] != "somente_para_ganhar")){
     int pValeTudo = 0, i = 0;
     while(pValeTudo == 0){
-      if(pals[pal+i] == "NaoParaPerder")
+      if(pals[pal+i] == "NaoParaPerder" || pals[pal+i] == "nao_para_perder") 
         pValeTudo = i;
       else if(i>=1000){
         pValeTudo = -2;
@@ -207,13 +209,12 @@ if ((pals[pal] == "Jogue" && pals[pal+4] == "SomenteParaGanhar") || (pals[pal] =
 int WHILE(std::vector<std::string> pals, int pal, Funcs& fun){
   // VamosBrilhar x == x    ComoUmDiamante Ed: x NessaGeracaoMarcante
   // pal         pal+1+2+3  pal+4                  pValeTudo
-  int i = 5;
+  int i = 5; // int i = 5 pq vamos verificar qual a proxima palava que pode ser o NessaGeracaoMarcante, n pode ser nenhuma antes de pals[pal+5]
   int acontece = IF(pals, pal, fun, 2);
   int pValeTudo = 0;
 
-
   while(pValeTudo == 0){
-    if(pals[pal+i] == "NessaGeracaoMarcante"){
+    if(pals[pal+i] == "EmUmaGeracaoMarcante" || pals[pal+i] == "em_uma_geracao_marcante"){
       pValeTudo = i;
     }
     i++;
@@ -230,5 +231,27 @@ int WHILE(std::vector<std::string> pals, int pal, Funcs& fun){
     
   };
 
-  return 0;
+  return pValeTudo;
+}
+
+int ELSE(std::vector<std::string> pals, int pal, Funcs& fun, int op){
+  int i = 5;
+  int acontece = IF(pals, pal, fun, 2);
+  int pValeTudo = 0;
+  while(pValeTudo == 0){
+    if(pals[pal+i] == "DeDificuldades" || pals[pal+i] == "de_dificuldades") 
+      pValeTudo = i;
+    i++;
+  }
+
+  if(acontece != 1){
+    i = 5;
+    while(pals[pal+i] != "DeDificuldades" || pals[pal+i] != "de_dificuldades"){
+      IdFunc(pals, pal+i, fun);
+      i++;
+    }
+  }
+
+  return pValeTudo;
+
 }

@@ -1,0 +1,14 @@
+Melancia dois 2
+Melancia tres 3
+
+Jogue dois < tres SomenteParaGanhar 
+EdP: "Isso_deveria_aparecer"
+NaoParaPerder
+
+Jogue dois > tres SomenteParaGanhar
+EdP: "Isso_nao_deveria_aparecer"
+NaoParaPerder
+
+AVidaEh dois > tres AssimCheia
+EdP: "Else"
+DeDificuldades

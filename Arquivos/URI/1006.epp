@@ -1,0 +1,14 @@
+WhatIsThe: b1
+WhatIsThe: b2
+WhatIsThe: b3
+
+chico* b1 2 b1
+chico* b2 3 b2
+chico* b3 5 b3
+
+chico+ b1 b2 total
+chico+ total b3 total
+
+chico/ total 10 total
+
+ed: "MEDIA\_=\_" edp: total

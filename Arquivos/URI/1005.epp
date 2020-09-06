@@ -1,0 +1,16 @@
+
+
+what_is_the: b1
+what_is_the: b2
+
+melancia p1 3.5
+melancia p2 7.5
+
+Chico* b1 p1 b1
+
+chico* b2 p2 b2
+chico+ b1 b2 t1
+chico/ t1 11 total
+
+
+ed: "MEDIA\_=\_" edp: total
