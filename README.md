@@ -149,16 +149,9 @@ Ed: My_string
 
 + [ ] IF (estruturado em if then endif / else then endelse)
   - [X] IF    (jogue)
-  - [ ] Else  
-  - [ ] Elif  
+  - [ ] Else  (a_vida_eh)
 
 
 - [X] WHILE
 
-- [ ] FOR
-
-O if que foi adicionado funciona de uma maneira bem tosca e provavelmente vai ter muitos erros, mas funciona, de um certo modo...
-
-
-Va fazer o while
-crie uma lista q pega as palavras, assim a IdFunc() n depende de nada e o IF pode ficar fora, sendo utilizado no while
+Adicionar funções para strings
