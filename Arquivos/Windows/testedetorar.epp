@@ -1,0 +1,14 @@
+lenha ola ValeNada ola ValeTudo
+edp: ola
+de_torar ola tamanho
+edp: tamanho
+
+
+melancia tamanho3 0
+
+
+de_torar "ola_voce" tamanho2
+edp: "ola_voce"
+de_torar ola tamanho3
+edp: tamanho2
+edp: tamanho3

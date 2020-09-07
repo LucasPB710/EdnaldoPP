@@ -4,12 +4,16 @@
 #include <algorithm>
 #include <vector>
 #include "Headers/Header.h"
+#include "Headers/IF.h"
 
 
 std::vector<std::string> ops{"=","+","-","*","/"};
+                                 //INT        print   STRING  SOMA ...
+std::vector<std::string> edWords_{"melancia","ed:","lenha","chico+","chico-","chico*","chico/","edp:","what_is_the:",
+                                    "chico+*","chico+/","chico++","chico+-", "a_vida_eh","de_torar","coco_seco"};
 
 std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:",
-                                    "Chico+*","Chico+/","Chico++","Chico+-"};
+                                    "Chico+*","Chico+/","Chico++","Chico+-", "AVidaEh","DeTorar","CocoSeco"};
 
 int main(){
   Funcs fun;
@@ -50,7 +54,7 @@ int main(){
           std::cout<<"(Arq) >> ";
           getline(std::cin, inp);
           if (inp == "Macaco de Oleo"){
-            escrevendo == false;
+            escrevendo = false;
             getline(std::cin, inp);
             arq.close();
           }
@@ -77,8 +81,14 @@ int main(){
 
           for(int i = 0; i<=pals.size();i++){
             for(int j =0;j<edWords.size();j++){
-              if (pals[i] == edWords[j]){
-                i+=IdFunc(pals,i, fun);
+              if (pals[i] == "Jogue" || pals[i] == "jogue"){
+                i+=IF(pals,i, fun, 1);
+              }
+              else if(pals[i] == edWords[j] || pals[i] == edWords_[j]){
+                i+=IdFunc(pals,i, fun); 
+              }
+              else if(pals[i] == "VamosBrilhar" || pals[i] == "vamos_brilhar"){
+                i+=WHILE(pals, i, fun);
               }
             }
           }
@@ -96,8 +106,14 @@ int main(){
 
       for(int i = 0; i<=pals.size();i++){
         for(int j =0;j<edWords.size();j++){
-          if (pals[i] == edWords[j]){
-            i+=IdFunc(pals,i, fun);
+          if (pals[i] == "Jogue" || pals[i] == "jogue"){
+            i+=IF(pals,i, fun, 1);
+          }
+          else if(pals[i] == edWords[j] || pals[i] == edWords_[j]){
+            i+=IdFunc(pals,i, fun); 
+          }
+          else if(pals[i] == "VamosBrilhar" || pals[i] == "vamos_brilhar"){
+            i+=WHILE(pals, i, fun);
           }
         }
         pals.clear();

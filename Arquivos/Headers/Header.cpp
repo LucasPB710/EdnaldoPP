@@ -2,6 +2,7 @@
 #include <cctype> //isdigit
 #include <vector>
 #include <string>
+#include <algorithm>
 #include "Header.h"
 
 
@@ -121,14 +122,14 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     bool strJaExiste = false;
 
     while(pValeTudo == 0 ){
-      if(pals[pal+i] == "ValeTudo")
+      if(pals[pal+i] == "ValeTudo" || pals[pal+i] == "vale_tudo")
         pValeTudo = i;
       i++;
       if (i>=1000)
         pValeTudo = -2;
     }
 
-    if (pals[pal+2] == "ValeNada" && pValeTudo >0){
+    if ((pals[pal+2] == "ValeNada" || pals[pal+2] == "vale_nada" )&& pValeTudo >0){
 
       for(int i = 0;i<fun.strN_get().size(); i++){
         if(pals[pal+1] == fun.strN_get()[i]){
@@ -364,6 +365,98 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     }
     return 1;
 
+  }
+
+  //DeTorar -> str.lengh()
+  else if (pals[pal] == "DeTorar" || pals[pal] == "de_torar"){
+    int strPos;
+    int fPos;
+    int tam;
+    std::string str;
+    bool FExiste = false, SExiste = false;
+
+    for(int i = 0; i<fun.strN_get().size(); i++){
+      if(pals[pal+1] == fun.strN_get()[i]){
+        strPos = i;
+        SExiste = true;
+        i = fun.strN_get().size();
+      }
+    }
+
+    for(int i = 0; i<fun.intN_get().size(); i++){
+      if(pals[pal+2] == fun.intN_get()[i]){
+        FExiste = true;
+        fPos = i;
+        i = fun.intN_get().size();
+      }
+    }
+
+    if(SExiste){
+      str = fun.strV_get()[strPos];
+    }
+    else{
+      str = pals[pal+1];
+    }
+    if(str[0] == '"' && str[str.length()-1] == '"'){
+      str.erase(str.begin());
+      str.erase(str.length()-1);
+    }
+    
+    if(FExiste){
+      if(SExiste){
+        fun.intV_change(str.length()-1, fPos);
+       }
+       else{
+        fun.intV_change(str.length(), fPos);
+       }
+    }
+    else{
+      if(SExiste)
+        fun.intV_set(str.length()-1);
+      else
+        fun.intV_set(str.length());
+      fun.intN_set(pals[pal+2]);
+    }
+    
+    
+  }
+
+  //CocoSeco -> reverte a string
+  else if(pals[pal] == "coco_seco" || pals[pal] == "CocoSeco"){
+    std::string str;
+    bool jaExst = false;
+    int sPos;
+
+    if(pals[pal+1][0] == '"'){
+      str = pals[pal+1];
+      str.erase(str.begin());
+      str.erase(str.length()-1);
+
+    }
+       
+
+    else{
+      for(int i = 0; i<fun.strN_get().size(); i++){
+        if(pals[pal+1] == fun.strN_get()[i]){
+          str = fun.strV_get()[i];
+        }
+        if(pals[pal+2] == fun.strN_get()[i]){
+          jaExst = true;
+          sPos = i;
+        }
+      }
+    }
+
+    std::reverse(str.begin(), str.end());
+
+    if(jaExst){
+      fun.strV_change(str,sPos);
+    }
+    else{
+      fun.strV_set(str);
+      fun.strN_set(pals[pal+2]);
+    }
+    
   }
 
   

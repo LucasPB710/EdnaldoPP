@@ -10,10 +10,10 @@ std::vector<std::string> ops{"=","+","-","*","/"};
 
                                  //INT        print   STRING  SOMA ...
 std::vector<std::string> edWords_{"melancia","ed:","lenha","chico+","chico-","chico*","chico/","edp:","what_is_the:",
-                                    "chico+*","chico+/","chico++","chico+-", "a_vida_eh"};
+                                    "chico+*","chico+/","chico++","chico+-", "a_vida_eh","de_torar","coco_seco"};
 
 std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:",
-                                    "Chico+*","Chico+/","Chico++","Chico+-", "AVidaEh"};
+                                    "Chico+*","Chico+/","Chico++","Chico+-", "AVidaEh","DeTorar","CocoSeco"};
 
 
 int main(){
