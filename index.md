@@ -3,9 +3,6 @@
 1. Bugs e coisas a serem adicionadas.
 
 2. Como funciona.
-   
-   1. 
-      
 
 3. "Tutorial".
 
