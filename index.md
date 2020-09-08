@@ -4,7 +4,7 @@
 
 2. Como funciona.
    
-   1. Lista com os comandos do Ednaldo++.
+   1. 
       
 
 3. "Tutorial".
@@ -18,6 +18,9 @@
 **Alem disso, você pode utilizar o Ednaldo++ no repl.it, basta clicar [nesse](https://repl.it/github/LucasPB710/EdLang) link**
 
 
+
+**Caso você queira uma lista com todos os comandos do Ednaldo++, você pode clicar [aqui](Comandos.md)**  
+(vale a pena, o site é bonito).
 
 
 
