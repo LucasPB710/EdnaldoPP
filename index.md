@@ -66,7 +66,7 @@ Caso voce queira uma lista com todos os comandos que Ednaldo++ possui, voce pode
 
 ##### 2.1 Lista com comandos do Ednaldo++
 
-[Lista](Comandos.md).
+[Lista.](Comandos.md)
 
 
 
