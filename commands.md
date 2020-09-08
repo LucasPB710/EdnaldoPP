@@ -4,16 +4,16 @@
 
 obs: op = some of these operations: +, -, *, /
 
-| NAME             | RECEIVE                                                         | SAME AS        |
-|:----------------:| ----------------------------------------------------------------|:--------------:|
-| Melancia         | Float                                                           | Int            |
-| Ed:              | Float or String                                                 | Print          |
-| Lenha            | String                                                          | String         |
-| Vale Nada/Tudo   |                                                                 | Delimitador    |
-| Chico(op)        | Two Ints or floats                                              | +, -, * ou /   |
-| Jogue            | one comparison that if its true will execute what comes next    | If             |
-| VamosBrilhar     | one comparison that while its true will execute what comes next | While          |
-| WhatIsThe: (name)| user input, can be string or float                              | Input, std::cin|
+| NAME              | RECEIVE                                                         | SAME AS         |
+|:-----------------:| --------------------------------------------------------------- |:---------------:|
+| Melancia          | Float                                                           | Int             |
+| Ed:               | Float or String                                                 | Print           |
+| Lenha             | String                                                          | String          |
+| Vale Nada/Tudo    |                                                                 | Delimitador     |
+| Chico(op)         | Two Ints or floats                                              | +, -, * ou /    |
+| Jogue             | one comparison that if its true will execute what comes next    | If              |
+| VamosBrilhar      | one comparison that while its true will execute what comes next | While           |
+| WhatIsThe: (name) | user input, can be string or float                              | Input, std::cin |
 
 ### OBS: Ed:
 
@@ -31,8 +31,6 @@ Ed: DOIS
 
 - create a variable called DOIS (two, in portuguese), that holds the value 2, next, we print the value
 
-
-
 ##### Lenha / ValeNada ValeTudo / Ed:
 
 ```ruby
@@ -41,8 +39,6 @@ Ed: MeuNome
 ```
 
 - Create string called MeuNome (MyName, in portuguese) that holds the value "Ednaldo pereira" then print the value
-
-
 
 ##### Chico / Ed:
 
@@ -56,6 +52,7 @@ Ed: nmrsBunitos
 - (W.I.P) the same applies for the other operations (Chico++ x y y -> y += x; Chico+- x y y -> y -= x; Chico+/ x y y -> y /= x)
 
 ##### Jogue
+
 ```ruby
 Melancia two 2
 Melancia three 3
@@ -66,6 +63,7 @@ NaoParaPerder
 ```
 
 ##### VamosBrilhar
+
 ```ruby
 Melancia t1 4
 Melancia total 1
@@ -83,7 +81,8 @@ Ed: total
 
 - this program runs VamosBrilhar, that its the same as an while, in the example we calculate the factorial of 5 ( 5! = 120 )
 
-##### WhatIsThe: 
+##### WhatIsThe:
+
 ```ruby
 Lenha name ValeNada Whats your name? : ValeTudo
 Ed: name
@@ -91,4 +90,5 @@ WhatIsThe: Brother
 Lenha name ValeNada Your name is: ValeTudo
 Ed: name Ed: Brother
 ```
+
 - in this example we have Brother, that will be what the user types, can be a float (if he types a number) or a string (if he types a string)
