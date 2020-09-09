@@ -30,6 +30,11 @@
 
 *ainda serão adicionadas mais coisas*.
 
+**Erros**
+
+- Voce nao consegue colocar um if dentro de outro
+
+
 **Ideias de coisas para adicionar ao Ednaldo++**
 
 - Provavelmente fazer ele ser compativel com sfml.
