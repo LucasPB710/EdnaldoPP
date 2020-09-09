@@ -28,7 +28,7 @@
 
 **bugs a serem corrigidos**
 
-- + Mais de 1 if no mesmo programa nao roda
+- Mais de 1 if no mesmo programa nao roda
 
 **Erros**
 
