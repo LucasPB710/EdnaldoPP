@@ -28,11 +28,11 @@
 
 **bugs a serem corrigidos**
 
-- Mais de 1 if no mesmo programa nao roda
+- [ ] Mais de 1 if no mesmo programa nao funciona
 
-**Erros**
+- [ ] Voce nao consegue colocar um if dentro de outro  
 
-- Voce nao consegue colocar um if dentro de outro
+    *provavelmente reescrever os ifs do 0 pra corrigir esses bugs*
 
 
 **Ideias de coisas para adicionar ao Ednaldo++**
