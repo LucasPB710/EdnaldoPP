@@ -24,7 +24,7 @@
 
 ---
 
-#### 1. Bugs e coisas a serem adicionadas
+### 1. Bugs e coisas a serem adicionadas
 
 **bugs a serem corrigidos**
 
@@ -43,7 +43,7 @@
 
 ---
 
-#### 2. Como Funciona
+### 2. Como Funciona
 
 Para escrever um arquivo em Ednaldo++, voce pode escolher qualquer extensão para um arquivo (ou nenhuma tambem), porem, nos exemplos que estao disponiveis no github, todos os arquivos usam a extensão .epp.
 
@@ -66,7 +66,7 @@ Então sempre se lembre de usar espaços quando voce estiver escrevendo algo em 
 
 Caso voce queira uma lista com todos os comandos que Ednaldo++ possui, voce pode clicar [aqui](Comandos.md) para ir para a pagina com todos os comandos e com uma explicação de como usar cada um deles.
 
-##### 2.1 Lista com comandos do Ednaldo++
+#### 2.1 Lista com comandos do Ednaldo++
 
 [Lista.](Comandos.md)
 
@@ -74,6 +74,6 @@ Caso voce queira uma lista com todos os comandos que Ednaldo++ possui, voce pode
 
 ------------------------------------------------------------------------------------------------------------------------------
 
-#### 3. Tutorial
+### 3. Tutorial
 
 faço isso dps, perdão.
