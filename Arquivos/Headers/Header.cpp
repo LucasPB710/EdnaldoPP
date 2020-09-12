@@ -294,6 +294,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     int tipo; //1-string 2-int
     std::string inp;
     getline(std::cin,inp);
+    // std::cin.ignore();
 
     if(fun.strN_get().size()>0){
       for(int i =0; i < fun.strN_get().size();i++){
@@ -462,7 +463,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
   
 
 
-  return 0 ;
+  return 0;
 }
 
   ///////////////

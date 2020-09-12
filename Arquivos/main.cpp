@@ -2,6 +2,7 @@
 #include <fstream>
 #include <algorithm>
 #include <vector>
+#include <string>
 #include "Headers/Header.h"
 #include "Headers/IF.h"
 
@@ -39,12 +40,12 @@ int main(){
   for(int i = 0; i<pals.size(); i++){
     for(int j = 0;j<edWords.size();j++){
       if (pals[i] == "Jogue" || pals[i] == "jogue"){
-        i+=IF(pals,i, fun, 1);
+        i += IF(pals, i, fun);
       }
-      else if(pals[i] == edWords[j] || pals[i] == edWords_[j]){
-        i+=IdFunc(pals,i, fun); 
+      if(pals[i] == edWords[j] || pals[i] == edWords_[j]){
+        i+=IdFunc(pals, i, fun); 
       }
-      else if(pals[i] == "VamosBrilhar" || pals[i] == "vamos_brilhar"){
+      if(pals[i] == "VamosBrilhar" || pals[i] == "vamos_brilhar"){
         i+=WHILE(pals, i, fun);
       }
     }

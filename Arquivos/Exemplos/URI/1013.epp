@@ -1,0 +1,49 @@
+what_is_the: b1
+what_is_the: b2
+what_is_the: b3
+
+melancia um 0
+melancia dois 0
+melancia tres 0
+
+melancia total 2
+
+jogue b1 > b2 somente_para_ganhar
+	chico+ 1 um um
+nao_para_perder
+
+jogue b1 > b3 somente_para_ganhar
+	chico+ 1 um um
+nao_para_perder
+
+jogue b2 > b1 somente_para_ganhar
+	chico+ 1 dois dois
+nao_para_perder
+
+jogue b2 > b3 somente_para_ganhar
+	chico+ 1 dois dois
+nao_para_perder
+
+jogue b3 > b2 somente_para_ganhar
+	chico+ 1 tres tres
+nao_para_perder
+
+jogue b3 > b1 somente_para_ganhar
+	chico+ 1 tres tres
+nao_para_perder
+
+
+jogue um == total somente_para_ganhar
+	ed: b1 
+	edp: "\_eh\_o\_maior"
+nao_para_perder
+
+jogue dois == total somente_para_ganhar
+	ed: b2 
+	edp: "\_eh\_o\_maior"
+nao_para_perder
+
+jogue tres == total somente_para_ganhar
+	ed: b3 
+	edp: "\_eh\_o\_maior"
+nao_para_perder
