@@ -3,19 +3,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
-template <typename T>
-bool verificaCond(T p1, T p2, int op);
-
-int IF(std::vector<std::string> pals, int pal, Funcs& fun);
 
 
-int IF(std::vector<std::string> pals, int pal, Funcs& fun){
+int IF(std::vector<std::string> pals, int pal, Funcs& fun, int op);
+
+
+int IF(std::vector<std::string> pals, int pal, Funcs& fun, int op){
   int pFim = 0;
   bool acontece = false;
   int i = 0;
 
-  while (pFim == 0){
-    if(pals[pal+i] == "nao_para_perder" || pals[pal+i] == "NaoParaPerder"){
+  while (pFim == 0 ){
+    if((pals[pal+i] == "nao_para_perder" || pals[pal+i] == "NaoParaPerder") && op == 1){
+      pFim = i;
+    }
+    else if((pals[pal+i] == "em_uma_geracao_marcante"|| pals[pal+i] == "EmUmaGeracaoMarcante") && op == 2){
       pFim = i;
     }
     i++;
@@ -56,7 +58,7 @@ int IF(std::vector<std::string> pals, int pal, Funcs& fun){
   }
 
   i = 5;
-  if(acontece){
+  if(acontece && op == 1){
     // std::cout<<"Acontece :)"<<pal+4<<'\n'<<p<<" - "<<p_<<'\n';
     while(pals[pal+i] != "nao_para_perder" && pals[pal+i] != "NaoParaPerder"){
       IdFunc(pals,pal+i,fun);
@@ -65,6 +67,11 @@ int IF(std::vector<std::string> pals, int pal, Funcs& fun){
     acontece = false;
     return pFim;
   }
+
+  else if(acontece && op == 2){
+    return 1;
+  }
+
   else{
     return pFim;
   }
@@ -136,32 +143,14 @@ bool verificaCond(T p1, T p2, int op){
 
  
 int WHILE(std::vector<std::string> pals, int pal, Funcs& fun){
+  // std::cout<<"\nWHILE\n";
+
   // VamosBrilhar x == x    ComoUmDiamante Ed: x NessaGeracaoMarcante
   // pal         pal+1+2+3  pal+4                  pValeTudo
   int i = 5; // int i = 5 pq vamos verificar qual a proxima palava que pode ser o NessaGeracaoMarcante, n pode ser nenhuma antes de pals[pal+5]
   
   int pValeTudo = 0, op =0;
-
-  if(pals[pal+2] == "=="){
-      op = 0;
-    }
-    else if(pals[pal+2] == ">"){
-      op = 1;
-    }
-    else if(pals[pal+2] == "<"){
-      op = 2;
-    }
-    else if(pals[pal+2] == ">="){
-      op = 3;
-    }
-    else if(pals[pal+2] == "<="){
-      op = 4;
-    }
-    else if(pals[pal+2] == "!="){
-      op = 5;
-    }
-
-  bool acontece = verificaCond(pals[pal+1], pals[pal+2], op);
+  int acontece = -2;
 
   while(pValeTudo == 0){
     if(pals[pal+i] == "EmUmaGeracaoMarcante" || pals[pal+i] == "em_uma_geracao_marcante"){
@@ -169,20 +158,24 @@ int WHILE(std::vector<std::string> pals, int pal, Funcs& fun){
     }
     i++;
   }
+  // std::cout<<"\n(1)ACONTECE: "<<acontece<<'\n';
+  acontece = IF(pals, pal, fun, 2);
+  // std::cout<<"\nACONTECE: "<<acontece<<'\n';
   // std::cout<<"Acontece: "<<IF(pals,pal, fun, 2)<<"\n";
-  while(acontece){
+  while(acontece == 1){
     i = 5;
     while(i<pValeTudo){
       IdFunc(pals,pal+i,fun);
       i++;
-
+      // std::cout<<'\n'<<acontece<<'\n';
     }
-    acontece = verificaCond(pals[pal+1], pals[pal+2], op);
+    acontece = IF(pals,pal, fun, 2);
     
-  };
+  }
 
   return pValeTudo;
 }
+
 
 int ELSE(std::vector<std::string> pals, int pal, Funcs& fun, int op){
   int i = 5;

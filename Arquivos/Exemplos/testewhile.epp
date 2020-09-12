@@ -1,0 +1,21 @@
+melancia dois 2
+melancia dez 10
+
+VamosBrilhar dois < dez como_um_diamante
+	chico- dez 1 dez
+	edp: dez
+em_uma_geracao_marcante
+
+melancia DEZ 10
+
+VamosBrilhar dez < DEZ como_um_diamante
+	chico+ dez 1 dez
+	edp: dez
+em_uma_geracao_marcante
+
+what_is_the: b1
+
+VamosBrilhar b1 > dez ComoUmDiamante
+	chico+ dez 0.5 dez
+	edp: dez
+EmUmaGeracaoMarcante

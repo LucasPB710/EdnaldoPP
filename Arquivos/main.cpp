@@ -40,7 +40,7 @@ int main(){
   for(int i = 0; i<pals.size(); i++){
     for(int j = 0;j<edWords.size();j++){
       if (pals[i] == "Jogue" || pals[i] == "jogue"){
-        i += IF(pals, i, fun);
+        i += IF(pals, i, fun, 1);
       }
       if(pals[i] == edWords[j] || pals[i] == edWords_[j]){
         i+=IdFunc(pals, i, fun); 
