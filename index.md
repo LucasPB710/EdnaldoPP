@@ -28,7 +28,7 @@
 
 **bugs a serem corrigidos**
 
-- [ ] Mais de 1 if no mesmo programa nao funciona
+- [X] ~Mais de 1 if no mesmo programa nao funciona~
 
 - [ ] Voce nao consegue colocar um if dentro de outro  
 
