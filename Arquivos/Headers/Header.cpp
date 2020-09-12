@@ -94,8 +94,8 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     if(tipo == -1){
       if (pals[pal+1][0] == '"' && pals[pal+1][pals[pal+1].size()-1] == '"'){
         pals[pal+1].erase(pals[pal+1].begin());
-        pals[pal+1].erase(pals[pal+1].size()-1);
-        for(int i = 0; i<pals[pal+1].size(); i++){
+        pals[pal+1].erase(pals[pal+1].length()-1);
+        for(int i = 0; i<pals[pal+1].length(); i++){
           if(pals[pal+1][i] == '\\' && pals[pal+1][i+1] == '_'){
             pals[pal+1].erase(pals[pal+1].begin()+i);
             pals[pal+1][i] = ' ';
@@ -144,8 +144,9 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
       for(int j = 1;j<pValeTudo-2;j++){
         Inp.append(pals[pal+2+j]);
-        Inp.append(" ");
+        Inp += ' ';
       }
+      Inp.erase(Inp.length()-1);
 
       if(strJaExiste){
         fun.strV_change(Inp, posStr);
@@ -296,7 +297,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     getline(std::cin,inp);
     // std::cin.ignore();
 
-    if(fun.strN_get().size()>0){
+    if(fun.strN_get().size() > 0){
       for(int i =0; i < fun.strN_get().size();i++){
         if(pals[pal+1] == fun.strN_get()[i]){
           pos = i;
@@ -307,7 +308,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
       }
     }
     
-    if(fun.intN_get().size()){
+    if(fun.intN_get().size() > 0){
       for(int i =0; i < fun.intN_get().size();i++){
         if(pals[pal+1] == fun.intN_get()[i]){
           pos = i;
@@ -394,6 +395,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
 
     if(SExiste){
       str = fun.strV_get()[strPos];
+      tam = fun.strV_get()[strPos].length();
     }
     else{
       str = pals[pal+1];
@@ -405,7 +407,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     
     if(FExiste){
       if(SExiste){
-        fun.intV_change(str.length()-1, fPos);
+        fun.intV_change(tam, fPos);
        }
        else{
         fun.intV_change(str.length(), fPos);
@@ -413,7 +415,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     }
     else{
       if(SExiste)
-        fun.intV_set(str.length()-1);
+        fun.intV_set(tam);
       else
         fun.intV_set(str.length());
       fun.intN_set(pals[pal+2]);

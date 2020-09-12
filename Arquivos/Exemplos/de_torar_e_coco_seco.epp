@@ -1,0 +1,23 @@
+lenha um vale_nada ola! vale_tudo
+de_torar um tam1
+
+ed: um ed: "\_tem\_tamanho:\_" edp: tam1
+ed: "\_Insira\_uma\_palavra:\_"
+what_is_the: palavra
+
+de_torar palavra tam2
+
+ed: palavra ed: "\_tem\_tamanho:\_" edp: tam2
+
+ed: "\_Insira\_uma\_palavra:\_"
+what_is_the: palavra1
+
+de_torar palavra1 tam3
+
+ed: palavra1 ed: "\_tem\_tamanho:\_" edp: tam3
+
+coco_seco palavra palavra_R
+coco_seco palavra1 palavra2R
+
+ed: palavra ed: "\_Ao\_contrario\_é:\_" edp: palavra_R
+ed: palavra1 ed: "\_Ao\_contrario\_é:\_" edp: palavra2R
