@@ -124,9 +124,12 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
     while(pValeTudo == 0 ){
       if(pals[pal+i] == "ValeTudo" || pals[pal+i] == "vale_tudo")
         pValeTudo = i;
-      i++;
-      if (i>=1000)
+      else if (i>=1000){
+        std::cout<<"Nao foi possivel encontrar ValeTudo ou vale_tudo\n";
+        return 0;
         pValeTudo = -2;
+      }
+      i++;
     }
 
     if ((pals[pal+2] == "ValeNada" || pals[pal+2] == "vale_nada" )&& pValeTudo >0){
@@ -159,9 +162,8 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
       return pValeTudo;
 
     }
-    else
+    else if(pals[pal+2] != "vale_nada" || pals[pal+2] != "ValeNada")
       std::cout<<"Erro de sintaxe, esperado vale nada e vale tudo\n";
-    return 0;
 
   }
 
@@ -173,7 +175,7 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
        || pals[pal] == "chico+" || pals[pal] == "chico-" || pals[pal] == "chico*" || pals[pal] == "chico/" || pals[pal] == "chico+*" || pals[pal] == "chico++"|| pals[pal] == "chico+-" || pals[pal] == "chico+/"){
     float p1,p2;
     //float resultado;
-    bool achado = false;
+    bool achado = false, v1 = false, v2 = false; //E -> verifica se o numero que nao existe na lista de ints é um numero
     int intPos;
 
     for(int i = 0; i<fun.intN_get().size(); i++){
@@ -181,11 +183,25 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
         p1 = fun.intV_get()[i];
         i = fun.intN_get().size();
         achado = true;
+        v1 = true;
+
       }
     }
 
-    if(!achado)
-      p1 = stof(pals[pal+1]);
+    if(!achado){
+
+      int d = 0;
+      for (int i = 0; i < pals[pal+1].length(); i++){
+        if(isdigit(pals[pal+1][i])||pals[pal+1][i] == '.'|| pals[pal+1][i] == '-'){
+          d++;
+        }
+      }
+      if(d == pals[pal+1].length()){
+        v1 = true;
+        p1 = stof(pals[pal+1]);
+
+      }
+    }
 
     achado = false;
 
@@ -194,11 +210,34 @@ int IdFunc(std::vector<std::string> pals, int pal, Funcs& fun){
         p2 = fun.intV_get()[i];
         i = fun.intN_get().size();
         achado = true;
+        
+        v2 = true;
       }
     }
 
-    if(!achado)
-      p2 = stof(pals[pal+2]);
+    if(!achado){
+
+      int d = 0;
+      for (int i = 0; i < pals[pal+2].length(); i++){
+        if(isdigit(pals[pal+2][i])||pals[pal+2][i] == '.'|| pals[pal+2][i] == '-'){
+          d++;
+        }
+      }
+      if(d == pals[pal+2].length()){
+        v2 = true;
+        p2 = stof(pals[pal+2]);
+      }
+    }
+
+    if (v1 == false && v2 == false){
+      std::cout<<"\nDOIS VALORES INVALIDOS (CHICO), argumentos: <"<<pals[pal+1]<<" "<<pals[pal+2]<<"> PALAVRA: "<<pal<<"\n"; return 3;
+    }
+    else if (v1 == false && v2 == true ){
+      std::cout<<"\nVALOR INVALIDO (CHICO), argumento <"<<pals[pal+1]<<"> PALAVRA: "<<pal<<"\n"; return 3;
+    }
+    else if(v2 == false && v1 == true ){
+      std::cout<<"\nVALOR INVALIDO (CHICO), argumento: <"<<pals[pal+2]<<"> PALAVRA: "<<pal<<"\n"; return 3;
+    }
 
     achado = false;
 

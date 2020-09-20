@@ -1,0 +1,26 @@
+melancia a 12
+what_is_the: b
+
+
+chico+ a b total
+ed: a ed: "\_+\_" ed: b ed: "\_=\_" edp: total
+
+chico* a 2 total
+ed: a ed: "\_*\_" ed: "2" ed: "\_=\_" edp: total
+
+chico* b 2 total
+ed: b ed: "\_*\_" ed: "2" ed: "\_=\_" edp: total
+
+chico- a b total
+ed: a ed: "\_-\_" ed: b ed: "\_=\_" edp: total
+
+chico/ a b total
+ed: a ed: "\_/\_" ed: b ed: "\_=\_" edp: total
+
+chico* a b total
+ed: a ed: "\_*\_" ed: b ed: "\_=\_" edp: total
+
+chico+ a 0 total
+
+chico+* a b total
+ed: a ed: "\_+*\_" ed: b ed: "\_=\_" edp: total
