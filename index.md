@@ -37,6 +37,10 @@
 
 **Ideias de coisas para adicionar ao Ednaldo++**
 
+- [ ] Substituir todos os "if(pals[pal] == "fulano")" por um switch que usa o id de cada comando
+
+   **Obs:** *problemas ao fazer isso com o if.cpp*
+
 - Provavelmente fazer ele ser compativel com sfml.
 
 - Criar um setup para ele.
