@@ -47,7 +47,7 @@ int main(){
         getline(std::cin, inp);
 
         std::ofstream arq;
-        arq.open(inp+".edl",std::ios::app);
+        arq.open(inp,std::ios::app);
 
         bool escrevendo = true;
         while(escrevendo){
@@ -63,6 +63,7 @@ int main(){
         }
       }
 
+      //Abre arquivo
       else if(inp == "Vai chover"){
         std::cout<<"\nNome do arquivo: ";
         getline(std::cin,inp);
