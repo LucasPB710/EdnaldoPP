@@ -29,13 +29,15 @@ Obs.: lembrando que todos esses comandos podem ser escritos com as palavras com 
 | WhatIsThe:     | String ou float                                     | Input         |
 
 
-**SFML**
+**SFML** *WIP*
 
 - Bola \<nome> \<raio> \<cor> -> cria uma bola
 
 - Desenha \<nome> -> desenha o objeto que possui o nome
 
-- 
+- Janela \<x> \<y> \<nome> -> cria uma janela x/y
+
+- BolaPos \<x> \<y> \<nome> -> muda a posição de uma bola ja criada
   
 
 
