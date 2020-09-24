@@ -15,15 +15,29 @@ Obs.: lembrando que todos esses comandos podem ser escritos com as palavras com 
 
             jogue x > y somente_para_ganhar edp: nome nao_para_perder
 
-| NOME           | RECEBE                                              | EQUIVALE A   |
-|:--------------:| --------------------------------------------------- |:------------:|
-| Melancia       | Float                                               | Int          |
-| Ed: / EdP:     | Float ou String                                     | Print        |
-| Lenha          | String                                              | String       |
-| Vale Nada/Tudo |                                                     | Delimitador  |
-| Chico(op)      | Duas Ints ou floats                                 | +, -, * ou / |
-| Jogue          | Uma comparação e o que sera feito caso seja verdade | If           |
-| VamosBrilhar   | Comparação e o que sera feito caso seja verdade     | While        |
+| NOME           | RECEBE                                              | EQUIVALE A    |
+|:--------------:| --------------------------------------------------- |:-------------:|
+| Melancia       | Float                                               | Int           |
+| Ed: / EdP:     | Float ou String                                     | Print         |
+| Lenha          | String                                              | String        |
+| Vale Nada/Tudo |                                                     | Delimitador   |
+| Chico(op)      | Duas Ints ou floats                                 | +, -, * ou /  |
+| Jogue          | Uma comparação e o que sera feito caso seja verdade | If            |
+| VamosBrilhar   | Comparação e o que sera feito caso seja verdade     | While         |
+| DeTorar        | String                                              | str.length()  |
+| CocoSeco       | String                                              | reverte a str |
+| WhatIsThe:     | String ou float                                     | Input         |
+
+
+**SFML**
+
+- Bola \<nome> \<raio> \<cor> -> cria uma bola
+
+- Desenha \<nome> -> desenha o objeto que possui o nome
+
+- 
+  
+
 
 ### Exemplos:
 
