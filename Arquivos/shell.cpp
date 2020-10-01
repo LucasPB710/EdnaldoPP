@@ -5,6 +5,7 @@
 #include <vector>
 #include "Headers/Header.h"
 #include "Headers/IF.h"
+#include "Headers/SFML.h"
 
 
 std::vector<std::string> ops{"=","+","-","*","/"};
@@ -15,8 +16,11 @@ std::vector<std::string> edWords_{"melancia","ed:","lenha","chico+","chico-","ch
 std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:",
                                     "Chico+*","Chico+/","Chico++","Chico+-", "AVidaEh","DeTorar","CocoSeco"};
 
+std::vector<std::string> sfmlWords{"Bola", "Desenha","Janela","BolaPos","EdnaldoPereira"};
+
 int main(){
   Funcs fun;
+  EdSFML esf;
 
   //std::string arqName;
   //std::cout<<"Nome do arquivo: ";
@@ -81,7 +85,7 @@ int main(){
         }
 
           for(int i = 0; i<=pals.size();i++){
-            for(int j =0;j<edWords.size();j++){
+            for(int j =0;j<=edWords.size();j++){
               if (pals[i] == "Jogue" || pals[i] == "jogue"){
                 i+=IF(pals,i, fun, 1);
               }
@@ -90,6 +94,11 @@ int main(){
               }
               else if(pals[i] == "VamosBrilhar" || pals[i] == "vamos_brilhar"){
                 i+=WHILE(pals, i, fun);
+              }
+            }
+            for(int j = 0; j <= sfmlWords.size(); j++){
+              if (pals[i] == sfmlWords[j]){
+                i+=IdSFML(pals, i, esf, fun);
               }
             }
           }
@@ -106,7 +115,7 @@ int main(){
       }
 
       for(int i = 0; i<=pals.size();i++){
-        for(int j =0;j<edWords.size();j++){
+        for(int j =0;j<=edWords.size();j++){
           if (pals[i] == "Jogue" || pals[i] == "jogue"){
             i+=IF(pals,i, fun, 1);
           }
@@ -115,6 +124,11 @@ int main(){
           }
           else if(pals[i] == "VamosBrilhar" || pals[i] == "vamos_brilhar"){
             i+=WHILE(pals, i, fun);
+          }
+        }
+        for(int j = 0; j <= sfmlWords.size(); j++){
+          if (pals[i] == sfmlWords[j]){
+            i+=IdSFML(pals, i, esf, fun);
           }
         }
         pals.clear();
