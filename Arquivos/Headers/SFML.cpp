@@ -3,6 +3,8 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
+std::vector<sf::CircleShape> ListaDesenho;
+
 bool digito(std::string pal){
     int d = 0;
     for(int i = 0; i<pal.size(); i++){
@@ -43,17 +45,17 @@ std::string sExist(std::string pal, Funcs &fun){
 }
 
 
-void EdSFML::Desenha(std::string obj){
-    int objpos = -1;
-    for(int i = 0; i <= getBoNomes().size(); i++){
-        if(obj == getBoNomes()[i]){
-            objpos = i;
-            i = getBola().size();
+//ID: 1->Desenha: (desenha o objeto, window.draw())
+//ID: 2->Desenha  (mostra tudo, window.display())
+void EdSFML::Desenha(){
+    // int objpos = -1;
+    // for(int i = 0; i <= getBoNomes().size(); i++){
+    //     if(obj == getBoNomes()[i]){
+    //         objpos = i;
+    //         i = getBola().size();
+    //     }
+    // }
 
-        }
-    }
-
-    sf::CircleShape bola = getBola()[objpos];
 
     int x, y;
     std::string nome;
@@ -64,6 +66,12 @@ void EdSFML::Desenha(std::string obj){
 
     sf::RenderWindow window (sf::VideoMode(x,y), nome);
 
+
+    window.clear(sf::Color::Black);
+
+    int t1 = ListaDesenho.size(), t2 = getBoNomes().size();
+
+
     while(window.isOpen()){
         sf::Event evento;
         while(window.pollEvent(evento)){
@@ -72,12 +80,13 @@ void EdSFML::Desenha(std::string obj){
             }
         }
 
-        window.clear(sf::Color::Black);
-
-        window.draw(bola);
+        for(int i = 0; i<ListaDesenho.size() ; i++){
+            window.draw(ListaDesenho[i]);
+        }
 
         window.display();
     }
+
 
 
 }
@@ -233,34 +242,63 @@ std::vector<sf::RectangleShape> EdSFML::getRetangulos(){ return Retangulos;}
 /////////////////////////////////////////////
 
 int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
+    if(pals[pal] == "Desenha:"){
+        std::string nome;
+        int objPos;
+
+        nome = pals[pal+1];
+
+        if(nome[0] == '"'){
+            nome.erase(nome.length()-1);
+            nome.erase(nome.begin());
+        }
+
+        for(int i = 0; i<esf.getBoNomes().size(); i++){
+            if(nome == esf.getBoNomes()[i]){
+                objPos = i;
+                i = esf.getBoNomes().size();
+            }
+        }
+        sf::CircleShape bola = esf.getBola()[objPos];
+
+        ListaDesenho.push_back(bola);
+
+        return 1;
+
+    }
+
     if(pals[pal] == "Desenha"){
-        esf.Desenha(pals[pal+1]);
+        esf.Desenha();
 
         return 1;
 
     }
     
     else if(pals[pal] == "Bola"){
+        //Bola nome raio cor
 
-        bool jaExiste = false;
+        std::string nome;
 
-        for(int i = 0; i < esf.getBoNomes().size(); i++ ){
-            if(pals[pal+3] == esf.getBoNomes()[i]){
-                jaExiste = true;
-            }
+        if(pals[pal+1][0] != '"')
+            nome = sExist(pals[pal+3], fun);
+
+        else{
+            nome = pals[pal+1];
+            nome.erase(nome.length()-1);
+            nome.erase(nome.begin());
         }
-        
-        if(jaExiste == false){
-            float raio = 0;
-            if(digito(pals[pal+2]))
-                raio = std::stof(pals[pal+2]);
-            else{
-                raio = fExist(pals[pal+2], fun);
-            }
 
-            esf.setBola(pals[pal+1],raio, pals[pal+3]);
-            return 3;
-        }
+        float raio = 0;
+
+        if(digito(pals[pal+2]))
+            raio = stof(pals[pal+2]);
+
+        else
+            raio = fExist(pals[pal+2], fun);
+
+        esf.setBola(nome, raio, pals[pal+3]);
+
+        return 3;
     }
 
     else if(pals[pal] == "Janela"){
@@ -297,13 +335,12 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
         else
             y = fExist(pals[pal+2], fun) ;
 
-        if(pals[pal+3][0] != '"'){
+        if(pals[pal+3][0] != '"')
             nome = sExist(pals[pal+3], fun);
-        }
-        else{
+
+        else
             nome = pals[pal+3];
-        }
-        
+
 
         esf.BolaPos(x,y,nome);
 

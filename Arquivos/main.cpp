@@ -17,7 +17,7 @@ std::vector<std::string> edWords_{"melancia","ed:","lenha","chico+","chico-","ch
 std::vector<std::string> edWords{"Melancia","Ed:","Lenha","Chico+","Chico-","Chico*","Chico/","EdP:","WhatIsThe:",
                                     "Chico+*","Chico+/","Chico++","Chico+-", "AVidaEh","DeTorar","CocoSeco"};
 
-std::vector<std::string> sfmlWords{"Bola", "Desenha","Janela","BolaPos","EdnaldoPereira"};
+std::vector<std::string> sfmlWords{"Bola", "Desenha","Janela","BolaPos","EdnaldoPereira","Desenha:"};
 
 
 int main(){

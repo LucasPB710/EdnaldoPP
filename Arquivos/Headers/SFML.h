@@ -31,7 +31,7 @@ class EdSFML{
 
 
 
-        void Desenha(std::string obj);
+        void Desenha();
         void BolaPos(int x, int y, std::string nome);
         void ednaldoPereira(int x, int y);
 
