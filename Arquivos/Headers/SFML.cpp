@@ -176,6 +176,36 @@ void EdSFML::setBola(std::string nome,float raio, std::string color){
     bolasNomes.push_back(nome);
 }
 
+void EdSFML::setRet(std::string nome, float x, float y, std::string color){
+
+    sf::RectangleShape rect(sf::Vector2f(x,y));
+    int r = 0, g = 0, b = 0;
+    if(color == "Azul"){b = 255;}
+    else if(color == "Vermelho"){ r = 255;}
+    else if(color == "Verde"){g = 255;}
+    else if(color[0] == '#'){
+        std::string r_; r_.resize(2);
+        std::string g_; g_.resize(2);
+        std::string b_; b_.resize(2);
+
+        r_[0] = color[1]; r_[1] = color[2];
+        g_[0] = color[3]; g_[1] = color[4];
+        b_[0] = color[5]; b_[1] = color[6];
+
+        r = stoi(r_,0,16);
+        g = stoi(g_,0,16);
+        b = stoi(b_,0,16);
+
+    }
+
+    rect.setFillColor(sf::Color(r,g,b));
+
+    Retangulos.push_back(rect);
+    retangulosNomes.push_back(nome);
+
+
+}
+
 void EdSFML::changeBola(sf::CircleShape inp, int pos){
     Bolas[pos] = inp;
 }
@@ -189,12 +219,13 @@ void EdSFML::setCor(std::string cor){
 }
 
 // sf::RenderWindow EdSFML::getJanela(){ return janela; }
-std::vector<sf::CircleShape> EdSFML::getBola(){ return Bolas; }
+std::vector<sf::CircleShape> EdSFML::getBola(){ return Bolas;}
 std::vector<std::string> EdSFML::getBoNomes(){ return bolasNomes;}
 std::string EdSFML::getNomeJanela(){ return NomeJanela;}
 int EdSFML::getX(){ return ResX;}
 int EdSFML::getY(){ return ResY;}
 std::string EdSFML::getCor(){ return Cor;}
+std::vector<sf::RectangleShape> EdSFML::getRetangulos(){ return Retangulos;}
 
 
   /////////////////////////////////////////////
@@ -210,15 +241,26 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
     }
     
     else if(pals[pal] == "Bola"){
-        float raio = 0;
-        if(digito(pals[pal+2]))
-            raio = std::stof(pals[pal+2]);
-        else{
-            raio = fExist(pals[pal+2], fun);
-        }
 
-        esf.setBola(pals[pal+1],raio, pals[pal+3]);
-        return 3;
+        bool jaExiste = false;
+
+        for(int i = 0; i < esf.getBoNomes().size(); i++ ){
+            if(pals[pal+3] == esf.getBoNomes()[i]){
+                jaExiste = true;
+            }
+        }
+        
+        if(jaExiste == false){
+            float raio = 0;
+            if(digito(pals[pal+2]))
+                raio = std::stof(pals[pal+2]);
+            else{
+                raio = fExist(pals[pal+2], fun);
+            }
+
+            esf.setBola(pals[pal+1],raio, pals[pal+3]);
+            return 3;
+        }
     }
 
     else if(pals[pal] == "Janela"){

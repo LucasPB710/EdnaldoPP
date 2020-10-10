@@ -1,6 +1,6 @@
 #pragma once
 #include "Header.h"
-#include <SFML/graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <string>
 #include <vector>
 
@@ -16,6 +16,8 @@ class EdSFML{
         void setJanela(int x, int y, std::string nome);
         void setCor(std::string cor); //Suporte a hexadecimal
 
+        void setRet(std::string nome, float x, float y, std::string color);
+
 
 
         std::vector<sf::CircleShape> getBola();
@@ -24,6 +26,8 @@ class EdSFML{
         int getY();
         std::string getNomeJanela();
         std::string getCor();
+        std::vector<sf::RectangleShape> getRetangulos();
+        std::vector<std::string> getRetNomes();
 
 
 
@@ -40,6 +44,8 @@ class EdSFML{
         std::vector<sf::CircleShape> Bolas;
         std::vector<std::string> bolasNomes;
         std::string Cor = "Azul";
+        std::vector<sf::RectangleShape> Retangulos;
+        std::vector<std::string> retangulosNomes;
 
 };
 int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun);
