@@ -1,0 +1,11 @@
+[default-2]
+name=Default (cópia)
+runtime=host
+toolchain=default
+config-opts=
+run-opts=
+prefix=/home/eu/.cache/gnome-builder/install/EdnaldoPP/host
+app-id=
+postbuild=
+prebuild=
+default=true

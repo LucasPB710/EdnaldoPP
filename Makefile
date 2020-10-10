@@ -1,4 +1,4 @@
-compila:
+install:
 	g++ Arquivos/Headers/*.cpp Arquivos/main.cpp -o Interpreter.o
 
 run:
