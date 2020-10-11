@@ -367,23 +367,23 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
     else if(pals[pal] == "Pos"){
         int x, y; std::string nome;
 
-        if(digito(pals[pal+1]))
-            x = stoi(pals[pal+1]);
-
-        else
-            x = fExist(pals[pal+1], fun) ;
-        
         if(digito(pals[pal+2]))
-            y = stoi(pals[pal+2]);
+            x = stoi(pals[pal+2]);
+
+        else
+            x = fExist(pals[pal+2], fun) ;
+        
+        if(digito(pals[pal+3]))
+            y = stoi(pals[pal+3]);
         
         else
-            y = fExist(pals[pal+2], fun) ;
+            y = fExist(pals[pal+3], fun) ;
 
-        if(pals[pal+3][0] != '"')
-            nome = sExist(pals[pal+3], fun);
+        if(pals[pal+1][0] != '"')
+            nome = sExist(pals[pal+1], fun);
 
         else
-            nome = pals[pal+3];
+            nome = pals[pal+1];
 
 
         esf.Pos(nome,x,y);
