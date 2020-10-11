@@ -17,6 +17,7 @@ class EdSFML{
         void setCor(std::string cor); //Suporte a hexadecimal
 
         void setRet(std::string nome, float x, float y, std::string color);
+        void setRegular(std::string nome, int lados, float raio, std::string color);
 
 
 
@@ -32,8 +33,9 @@ class EdSFML{
 
 
         void Desenha();
-        void BolaPos(int x, int y, std::string nome);
+        void Pos(std::string nome, int x, int y);
         void ednaldoPereira(int x, int y);
+        void Rot(std::string nome, float angulo);
 
 
     private:

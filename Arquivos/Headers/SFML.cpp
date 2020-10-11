@@ -91,7 +91,7 @@ void EdSFML::Desenha(){
 
 }
 
-void EdSFML::BolaPos(int x, int y, std::string nome){
+void EdSFML::Pos(std::string nome, int x, int y){
     int objPos;
     bool existe = false;
 
@@ -129,6 +129,7 @@ void EdSFML::ednaldoPereira(int x, int y){
     ednaldo.setTexture(ed); 
     
     sf::RenderWindow window (sf::VideoMode(x,y), getNomeJanela());
+    window.setFramerateLimit(60);
 
     while(window.isOpen()){
         sf::Event evento;
@@ -146,6 +147,21 @@ void EdSFML::ednaldoPereira(int x, int y){
     }
 }
 
+void EdSFML::Rot(std::string nome, float angulo){
+    int objPos;
+
+    for(int i = 0; i<getBoNomes().size(); i++){
+        if(nome == getBoNomes()[i]){
+            objPos = i;
+            i = getBoNomes().size();
+        }
+    }
+
+    sf::CircleShape _bola = getBola()[objPos];
+    _bola.rotate(angulo);
+    changeBola(_bola, objPos);
+}
+
 
 
 
@@ -159,6 +175,34 @@ void EdSFML::ednaldoPereira(int x, int y){
 
 void EdSFML::setBola(std::string nome,float raio, std::string color){
     sf::CircleShape bola(raio);
+    int r = 0, g = 0, b = 0;
+
+    if(color == "Azul"){b = 255;}
+    else if(color == "Vermelho"){ r = 255;}
+    else if(color == "Verde"){g = 255;}
+    else if(color[0] == '#'){
+        std::string r_; r_.resize(2);
+        std::string g_; g_.resize(2);
+        std::string b_; b_.resize(2);
+
+        r_[0] = color[1]; r_[1] = color[2];
+        g_[0] = color[3]; g_[1] = color[4];
+        b_[0] = color[5]; b_[1] = color[6];
+
+        r = stoi(r_,0,16);
+        g = stoi(g_,0,16);
+        b = stoi(b_,0,16);
+
+    }
+
+    bola.setFillColor(sf::Color(r,g,b));
+
+    Bolas.push_back(bola);
+    bolasNomes.push_back(nome);
+}
+
+void EdSFML::setRegular(std::string nome, int lados, float raio, std::string color){
+    sf::CircleShape bola(raio, lados);
     int r = 0, g = 0, b = 0;
 
     if(color == "Azul"){b = 255;}
@@ -320,7 +364,7 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
         return 3;
     }
 
-    else if(pals[pal] == "BolaPos"){
+    else if(pals[pal] == "Pos"){
         int x, y; std::string nome;
 
         if(digito(pals[pal+1]))
@@ -342,7 +386,7 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
             nome = pals[pal+3];
 
 
-        esf.BolaPos(x,y,nome);
+        esf.Pos(nome,x,y);
 
         return 3;
     }
@@ -350,6 +394,56 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
     else if(pals[pal] == "EdnaldoPereira"){
         esf.ednaldoPereira(stoi(pals[pal+1]), stoi(pals[pal+2]));
         return 2;
+    }
+
+    else if(pals[pal] == "Regular"){
+        //Regular nome lados tamanho cor
+        int lados; std::string nome;
+        float tamanho;
+
+        if(digito(pals[pal+2]))
+            lados = stoi(pals[pal+2]);
+
+        else
+            lados = fExist(pals[pal+2], fun);
+
+        if(digito(pals[pal+3]))
+            tamanho = stof(pals[pal+3]);
+
+        else
+            tamanho = fExist(pals[pal+3], fun);
+
+        if(pals[pal+1][0] != '"')
+            nome = sExist(pals[pal+1], fun);
+
+        else{
+            nome = pals[pal+1];
+            nome.erase(nome.length() - 1);
+            nome.erase(nome.begin());
+        }
+
+        esf.setRegular(nome, lados, tamanho, pals[pal+4]);
+
+    }
+
+    else if(pals[pal] == "Rot"){
+        std::string nome;
+        float angulo;
+
+        if(pals[pal+1][0] != '"')
+            nome = sExist(pals[pal+1], fun);
+
+        else
+            nome = pals[pal+1];
+
+        if(digito(pals[pal+2]))
+            angulo = stof(pals[pal+2]);
+
+        else
+            angulo = fExist(pals[pal+2], fun);
+
+        esf.Rot(nome, angulo);
+
     }
 
 
