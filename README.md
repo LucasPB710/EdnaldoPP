@@ -2,23 +2,6 @@
 
 ![](Gifs/gif2.gif)
 
-# HOW TO USE (For the repl.it jam)
-
-You can create a file with any extension that you want, you can find sample files in the folders Arquivos, or in Arquivos/Windows, you will find some .epp or .edl files, if you want to know what each command does: [commands](commands.md)
-
-after you create the ednaldo++ file, you can click in the RUN button, will ask for a file name, so you put the name or path to the file you just created
-
-one important thing in Ednaldo++ is the spaces, if you type Ed:Myvar the program will not understand, but if you type Ed: MyVar, the program will run fine
-
-### Who is ~~the sister~~ Ednaldo Pereira and what is Ednaldo++ (or ednaldoPP)
-
-Ednaldo pereira is a brazilian singer, he is often associated with some memes.
-
-This ""Programing language"" is based on his speechs and lyrics. I really didn't put much effort into it, so yes, we have many bugs and other things. In fact, this PL was not meant to be a part of the jam, so you can just ignore this, and have a good day testing new PLs.
-
-~~the sister~~ is a reference to his song "Who is the sister"
-
-
 # Lista com os comandos de EdnaldoPP:
 
 (voce nao precisa ficar indo ao final do readme, no arquivo abaixo tem exemplos melhores")
@@ -155,3 +138,9 @@ Ed: My_string
 - [X] WHILE
 
 Adicionar funções para strings
+
+Colaboradores (sem contar com os do Github):
+
+- Milla:
+  + Twitter: [@millariaaa](https://twitter.com/millariaaa)
+  + Reddit: [u/cleberpenguin](https://www.reddit.com/user/cleberpenguin)
