@@ -159,8 +159,6 @@ void EdSFML::Rot(std::string nome, float angulo){
     if(objPos != -2){
         sf::CircleShape bola;
         bola = getBola()[objPos];
-        std::cout<<"\n"<<getBoNomes()[objPos]<<"\n";
-        std::cout<<"\n"<<objPos<<"\n";
         bola.rotate(angulo);
         changeBola(bola, objPos);
     }

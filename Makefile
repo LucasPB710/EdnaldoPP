@@ -1,9 +1,9 @@
 install:
-	echo"Compilando o interpreter..."
+	"Compilando o interpreter..."
 	@g++ Arquivos/main.cpp Arquivos/Headers/*.cpp -lsfml-graphics -lsfml-window -lsfml-system -o Ednaldo++.o
-	echo"Compilando o shell..."
+	"Compilando o shell..."
 	@g++ Arquivos/shell.cpp Arquivos/Headers/*.cpp -lsfml-graphics -lsfml-window -lsfml-system -o Shell.o
-	echo"Fim."
+	"Fim."
 run:
 	./Ednaldo++.o
 runShell:
