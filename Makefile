@@ -4,6 +4,7 @@ install:
 	"Compilando o shell..."
 	@g++ Arquivos/shell.cpp Arquivos/Headers/*.cpp -lsfml-graphics -lsfml-window -lsfml-system -o Shell.o
 	"Fim."
+
 run:
 	./Ednaldo++.o
 runShell:
