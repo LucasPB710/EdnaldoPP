@@ -1,0 +1,27 @@
+Lenha a ValeNada a ValeTudo
+Lenha b ValeNada b ValeTudo
+Lenha c ValeNada c ValeTudo
+Lenha d ValeNada d ValeTudo
+
+Regular a 4 100 Azul
+Rot a 45
+Pos a 100 50
+
+Regular c 4 50 Verde
+Rot c 45
+Pos c 100 155
+
+
+Regular d 4 50 Azul
+Rot d 45
+Pos d 65 155
+
+
+Regular b 3 100 Vermelho
+
+Desenha: a
+Desenha: b
+Desenha: c
+Desenha: d
+
+Desenha

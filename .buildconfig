@@ -1,8 +1,8 @@
-[default-2]
-name=Default (cópia)
+[default]
+name=Default
 runtime=host
 toolchain=default
-config-opts=shell && make run
+config-opts=make run
 run-opts=
 prefix=/home/eu/.cache/gnome-builder/install/EdnaldoPP/host
 app-id=

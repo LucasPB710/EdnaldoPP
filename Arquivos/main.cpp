@@ -54,9 +54,7 @@ int main(){
         i+=WHILE(pals, i, fun);
       }
       if (pals[i] == sfmlWords[j]){
-        std::cout<<"JOJOJ";
         i+=IdSFML(pals, i, esf, fun);
-        std::cout<<pals[i];
       }
     }
       

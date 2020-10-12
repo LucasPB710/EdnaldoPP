@@ -1,0 +1,11 @@
+Regular "a" 3 100 Azul
+Regular "b" 4 100 Verde
+Regular "c" 5 100 Vermelho
+
+Rot "a" 45
+
+Desenha: "a"
+Desenha: "b"
+
+Desenha: "c"
+Desenha

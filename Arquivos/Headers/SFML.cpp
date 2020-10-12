@@ -148,18 +148,22 @@ void EdSFML::ednaldoPereira(int x, int y){
 }
 
 void EdSFML::Rot(std::string nome, float angulo){
-    int objPos;
+    int objPos = -2;
 
-    for(int i = 0; i<getBoNomes().size(); i++){
+    for(int i = 0; i<=getBoNomes().size(); i++){
         if(nome == getBoNomes()[i]){
             objPos = i;
             i = getBoNomes().size();
         }
     }
-
-    sf::CircleShape _bola = getBola()[objPos];
-    _bola.rotate(angulo);
-    changeBola(_bola, objPos);
+    if(objPos != -2){
+        sf::CircleShape bola;
+        bola = getBola()[objPos];
+        std::cout<<"\n"<<getBoNomes()[objPos]<<"\n";
+        std::cout<<"\n"<<objPos<<"\n";
+        bola.rotate(angulo);
+        changeBola(bola, objPos);
+    }
 }
 
 
@@ -433,8 +437,11 @@ int IdSFML(std::vector<std::string> pals, int pal, EdSFML &esf, Funcs &fun){
         if(pals[pal+1][0] != '"')
             nome = sExist(pals[pal+1], fun);
 
-        else
-            nome = pals[pal+1];
+        else{
+                nome = pals[pal+1];
+                nome.erase(nome.length()-1);
+                nome.erase(nome.begin());
+            }
 
         if(digito(pals[pal+2]))
             angulo = stof(pals[pal+2]);
