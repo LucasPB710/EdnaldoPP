@@ -1,2 +1,2 @@
 language = "cpp"
-run = "make compila && make run"
+run = "make && make run"
